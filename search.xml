@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/01/17/hello-world/</url>
+    <content><![CDATA[<h2 id="How-to-create-a-blog-based-on-Hexo"><a href="#How-to-create-a-blog-based-on-Hexo" class="headerlink" title="How to create a blog based on Hexo?"></a>How to create a blog based on Hexo?</h2><p>A word tutorial or a video tutorial, choose the one that you like:</p>
+<ul>
+<li><a href="https://ryanluoxu.github.io/2017/11/24/%E7%94%A8-Hexo-%E5%92%8C-GitHub-Pages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2">用 Hexo 和 GitHub Pages 搭建博客</a></li>
+<li><a href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&seid=14018659341007098701">手把手教你从 0 开始搭建自己的个人博客 | 无坑版视频教程 | hexo</a></li>
+</ul>
+<h3 id="Caution"><a href="#Caution" class="headerlink" title="Caution"></a>Caution</h3><p>If the Github Page does not show up properly as expected, check out the setting of the repository, the <code>GitHub Pages</code> part, see if it is with the right branch, and choose a theme freely cuz we would change it afterwards.</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h3><p>All kinds of Hexo themes are readily available by searching “Hexo themes”.<br>Stay at  the parent folder of <code>theme</code> folder, and type</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir .\theme\next</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next.git themes\next</span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span>  <span class="comment">#equals to $hexo n &quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate     <span class="comment">#equals to $hexo g&quot; </span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server   <span class="comment">#equals to $hexo s&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy    <span class="comment">#equals to $hexo d&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+</search>
