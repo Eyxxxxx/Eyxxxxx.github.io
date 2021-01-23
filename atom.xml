@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Dig a Big Hole</title>
+  
+  <subtitle>记录/感悟</subtitle>
+  <link href="https://eyxxxxx.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://eyxxxxx.github.io/"/>
+  <updated>2021-01-23T15:12:15.023Z</updated>
+  <id>https://eyxxxxx.github.io/</id>
+  
+  <author>
+    <name>The magical rabbit</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://eyxxxxx.github.io/2021/01/17/hello-world/"/>
+    <id>https://eyxxxxx.github.io/2021/01/17/hello-world/</id>
+    <published>2021-01-17T08:42:30.774Z</published>
+    <updated>2021-01-23T15:12:15.023Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;How-to-create-a-blog-based-on-Hexo&quot;&gt;&lt;a href=&quot;#How-to-create-a-blog-based-on-Hexo&quot; class=&quot;headerlink&quot; title=&quot;How to create a blog based on Hexo?&quot;&gt;&lt;/a&gt;How to create a blog based on Hexo?&lt;/h2&gt;&lt;p&gt;A word tutorial or a video tutorial, choose the one that you like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://ryanluoxu.github.io/2017/11/24/%E7%94%A8-Hexo-%E5%92%8C-GitHub-Pages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2&quot;&gt;用 Hexo 和 GitHub Pages 搭建博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=14018659341007098701&quot;&gt;手把手教你从 0 开始搭建自己的个人博客 | 无坑版视频教程 | hexo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://eyxxxxx.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
+    
+    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
+    
+  </entry>
+  
+</feed>
