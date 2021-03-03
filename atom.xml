@@ -6,7 +6,7 @@
   <link href="https://eyxxxxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://eyxxxxx.github.io/"/>
-  <updated>2021-01-25T03:27:30.516Z</updated>
+  <updated>2021-03-03T06:42:49.300Z</updated>
   <id>https://eyxxxxx.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hexo-其它问题-1</title>
-    <link href="https://eyxxxxx.github.io/2021/01/25/hexo-%E5%85%B6%E5%AE%83%E9%97%AE%E9%A2%98-1/"/>
-    <id>https://eyxxxxx.github.io/2021/01/25/hexo-%E5%85%B6%E5%AE%83%E9%97%AE%E9%A2%98-1/</id>
+    <title>word-管理员已关闭最近文档列表</title>
+    <link href="https://eyxxxxx.github.io/posts/850aa5e/"/>
+    <id>https://eyxxxxx.github.io/posts/850aa5e/</id>
+    <published>2021-03-02T08:36:30.261Z</published>
+    <updated>2021-03-03T06:42:49.300Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;word - 打开 - 最近 - 文档/文件夹&lt;/code&gt; 显示：&lt;br&gt;&lt;code&gt;您的管理员已关闭最近文档列表。请选择一个浏览文档的位置。&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;右键&lt;code&gt;任务栏&lt;/code&gt;中&lt;code&gt;word&lt;/code&gt;的图标, &lt;code&gt;最近&lt;/code&gt;文件一栏显示为空.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;解决方案&quot;&gt;&lt;a href=&quot;#解决方案&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h2&gt;&lt;p&gt;(打开 windows 10 家庭版 的 组策略编辑器 -&amp;gt;) 修改组策略 -&amp;gt; 修改注册表&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="村口修电脑" scheme="https://eyxxxxx.github.io/categories/%E6%9D%91%E5%8F%A3%E4%BF%AE%E7%94%B5%E8%84%91/"/>
+    
+    
+    <category term="word" scheme="https://eyxxxxx.github.io/tags/word/"/>
+    
+    <category term="register" scheme="https://eyxxxxx.github.io/tags/register/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-其它问题-1</title>
+    <link href="https://eyxxxxx.github.io/posts/24000/"/>
+    <id>https://eyxxxxx.github.io/posts/24000/</id>
     <published>2021-01-25T03:15:34.286Z</published>
-    <updated>2021-01-25T03:27:30.516Z</updated>
+    <updated>2021-01-26T03:39:36.771Z</updated>
     
     
     <summary type="html">&lt;p&gt;我搭建博客过程中碰到过的一些问题&lt;/p&gt;
@@ -31,6 +58,8 @@
     
     <category term="Hexo" scheme="https://eyxxxxx.github.io/categories/Hexo/"/>
     
+    <category term="基于NexT主题的环境配置" scheme="https://eyxxxxx.github.io/categories/Hexo/%E5%9F%BA%E4%BA%8ENexT%E4%B8%BB%E9%A2%98%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
     
     <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
     
@@ -39,11 +68,11 @@
   </entry>
   
   <entry>
-    <title>hexo-界面美化-1</title>
-    <link href="https://eyxxxxx.github.io/2021/01/25/hexo-%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96-1/"/>
-    <id>https://eyxxxxx.github.io/2021/01/25/hexo-%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96-1/</id>
+    <title>Hexo-界面美化-1</title>
+    <link href="https://eyxxxxx.github.io/posts/25272/"/>
+    <id>https://eyxxxxx.github.io/posts/25272/</id>
     <published>2021-01-25T02:53:33.698Z</published>
-    <updated>2021-01-25T03:29:06.466Z</updated>
+    <updated>2021-01-26T03:37:40.433Z</updated>
     
     
     <summary type="html">&lt;p&gt;介绍一些可有可无的博客美化(基础美化)&lt;/p&gt;
@@ -53,6 +82,8 @@
     
     <category term="Hexo" scheme="https://eyxxxxx.github.io/categories/Hexo/"/>
     
+    <category term="基于NexT主题的环境配置" scheme="https://eyxxxxx.github.io/categories/Hexo/%E5%9F%BA%E4%BA%8ENexT%E4%B8%BB%E9%A2%98%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
     
     <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
     
@@ -61,11 +92,11 @@
   </entry>
   
   <entry>
-    <title>hexo-功能添加-1</title>
-    <link href="https://eyxxxxx.github.io/2021/01/22/hexo-%E5%8A%9F%E8%83%BD%E6%B7%BB%E5%8A%A0-1/"/>
-    <id>https://eyxxxxx.github.io/2021/01/22/hexo-%E5%8A%9F%E8%83%BD%E6%B7%BB%E5%8A%A0-1/</id>
+    <title>Hexo-功能添加-1</title>
+    <link href="https://eyxxxxx.github.io/posts/undefined/"/>
+    <id>https://eyxxxxx.github.io/posts/undefined/</id>
     <published>2021-01-21T16:57:21.671Z</published>
-    <updated>2021-01-25T03:27:35.861Z</updated>
+    <updated>2021-01-25T03:41:12.349Z</updated>
     
     
     <summary type="html">&lt;p&gt;介绍一些博客基础功能的配置&lt;/p&gt;
@@ -74,6 +105,8 @@
     
     
     <category term="Hexo" scheme="https://eyxxxxx.github.io/categories/Hexo/"/>
+    
+    <category term="基于NexT主题的环境配置" scheme="https://eyxxxxx.github.io/categories/Hexo/%E5%9F%BA%E4%BA%8ENexT%E4%B8%BB%E9%A2%98%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
     
     <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
@@ -84,8 +117,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://eyxxxxx.github.io/2021/01/17/hello-world/"/>
-    <id>https://eyxxxxx.github.io/2021/01/17/hello-world/</id>
+    <link href="https://eyxxxxx.github.io/posts/undefined/"/>
+    <id>https://eyxxxxx.github.io/posts/undefined/</id>
     <published>2021-01-17T08:42:30.774Z</published>
     <updated>2021-01-23T15:12:15.023Z</updated>
     
