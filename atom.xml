@@ -6,7 +6,7 @@
   <link href="https://eyxxxxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://eyxxxxx.github.io/"/>
-  <updated>2021-03-06T16:50:20.755Z</updated>
+  <updated>2021-03-06T16:55:33.056Z</updated>
   <id>https://eyxxxxx.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://eyxxxxx.github.io/posts/Unified%20National%20Graduate%20Entrance%20Examination%201/"/>
     <id>https://eyxxxxx.github.io/posts/Unified%20National%20Graduate%20Entrance%20Examination%201/</id>
     <published>2021-03-04T05:59:45.671Z</published>
-    <updated>2021-03-06T16:50:20.755Z</updated>
+    <updated>2021-03-06T16:55:33.056Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;strong&gt;免责声明: 若因本人的任何建议而导致最终发挥失常的本人概不负责.&lt;/strong&gt;&lt;/p&gt;
@@ -67,10 +67,10 @@
   
   <entry>
     <title>Hexo-其它问题-1</title>
-    <link href="https://eyxxxxx.github.io/posts/24000/"/>
-    <id>https://eyxxxxx.github.io/posts/24000/</id>
+    <link href="https://eyxxxxx.github.io/posts/hexo%20problems1/"/>
+    <id>https://eyxxxxx.github.io/posts/hexo%20problems1/</id>
     <published>2021-01-25T03:15:34.286Z</published>
-    <updated>2021-01-26T03:39:36.771Z</updated>
+    <updated>2021-03-06T16:54:50.165Z</updated>
     
     
     <summary type="html">&lt;p&gt;我搭建博客过程中碰到过的一些问题&lt;/p&gt;
@@ -91,10 +91,10 @@
   
   <entry>
     <title>Hexo-界面美化-1</title>
-    <link href="https://eyxxxxx.github.io/posts/25272/"/>
-    <id>https://eyxxxxx.github.io/posts/25272/</id>
+    <link href="https://eyxxxxx.github.io/posts/hexo%20css1/"/>
+    <id>https://eyxxxxx.github.io/posts/hexo%20css1/</id>
     <published>2021-01-25T02:53:33.698Z</published>
-    <updated>2021-01-26T03:37:40.433Z</updated>
+    <updated>2021-03-06T16:55:16.778Z</updated>
     
     
     <summary type="html">&lt;p&gt;介绍一些可有可无的博客美化(基础美化)&lt;/p&gt;
@@ -115,10 +115,10 @@
   
   <entry>
     <title>Hexo-功能添加-1</title>
-    <link href="https://eyxxxxx.github.io/posts/e0f4965c/"/>
-    <id>https://eyxxxxx.github.io/posts/e0f4965c/</id>
+    <link href="https://eyxxxxx.github.io/posts/hexo%20functions1/"/>
+    <id>https://eyxxxxx.github.io/posts/hexo%20functions1/</id>
     <published>2021-01-21T16:57:21.671Z</published>
-    <updated>2021-03-06T15:59:05.378Z</updated>
+    <updated>2021-03-06T16:55:02.013Z</updated>
     
     
     <summary type="html">&lt;p&gt;介绍一些博客基础功能的配置&lt;/p&gt;
@@ -139,10 +139,10 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://eyxxxxx.github.io/posts/4a17b156/"/>
-    <id>https://eyxxxxx.github.io/posts/4a17b156/</id>
+    <link href="https://eyxxxxx.github.io/posts/Hello-world/"/>
+    <id>https://eyxxxxx.github.io/posts/Hello-world/</id>
     <published>2021-01-17T08:42:30.774Z</published>
-    <updated>2021-03-06T15:59:05.376Z</updated>
+    <updated>2021-03-06T16:54:11.457Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;How-to-create-a-blog-based-on-Hexo&quot;&gt;&lt;a href=&quot;#How-to-create-a-blog-based-on-Hexo&quot; class=&quot;headerlink&quot; title=&quot;How to create a blog based on Hexo?&quot;&gt;&lt;/a&gt;How to create a blog based on Hexo?&lt;/h2&gt;&lt;p&gt;A word tutorial or a video tutorial, choose the one that you like:&lt;/p&gt;
