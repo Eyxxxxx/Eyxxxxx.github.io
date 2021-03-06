@@ -2,26 +2,47 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Dig a Big Hole</title>
   
-  <subtitle>记录/感悟</subtitle>
+  <subtitle>Input/Output</subtitle>
   <link href="https://eyxxxxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://eyxxxxx.github.io/"/>
-  <updated>2021-03-03T06:43:26.371Z</updated>
+  <updated>2021-03-06T15:47:48.486Z</updated>
   <id>https://eyxxxxx.github.io/</id>
   
   <author>
-    <name>A Fantastic Rabbit</name>
+    <name>yx</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>考研-初试</title>
+    <link href="https://eyxxxxx.github.io/posts/Unified%20National%20Graduate%20Entrance%20Examination%201/"/>
+    <id>https://eyxxxxx.github.io/posts/Unified%20National%20Graduate%20Entrance%20Examination%201/</id>
+    <published>2021-03-04T05:59:45.671Z</published>
+    <updated>2021-03-06T15:47:48.486Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;免责声明: 若因本人的任何建议而最终发挥失常的本人概不负责.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;本贴只讲述本人复习期间实际做过的事情和从成绩结果出发的反思总结, &lt;strong&gt;总的回顾来看这波复习操作比较迷&lt;/strong&gt;, 仅供感觉自己要来不及学且目标院校不是清北复交那么高不可攀的同学参考, &lt;strong&gt;建议配合其它经验贴食用.&lt;/strong&gt;  &lt;/p&gt;
+&lt;h2 id=&quot;个人基础介绍&quot;&gt;&lt;a href=&quot;#个人基础介绍&quot; class=&quot;headerlink&quot; title=&quot;个人基础介绍&quot;&gt;&lt;/a&gt;个人基础介绍&lt;/h2&gt;&lt;p&gt;记性还可以, 心比较大. 企图通过每一遍多花点时间认真学来取得别人多学好几遍的效果.  (不学很多遍实际上是因为时间来不及)&lt;br&gt;101-政治: 因为高考需要在高中正经学过政治, 对政治的感觉比较好.&lt;br&gt;201-英语: 大学两年几乎不碰英语六级裸考590+.&lt;br&gt;301-数学: 基础非常不牢, 一碰地动山摇.&lt;br&gt;824-专业课: 考DS和计网, 学校里第一遍学的时候自我感觉掌握的还可以.  &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="反思总结" scheme="https://eyxxxxx.github.io/categories/%E5%8F%8D%E6%80%9D%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="经验贴" scheme="https://eyxxxxx.github.io/tags/%E7%BB%8F%E9%AA%8C%E8%B4%B4/"/>
+    
+  </entry>
+  
+  <entry>
     <title>word-管理员已关闭最近文档列表</title>
-    <link href="https://eyxxxxx.github.io/posts/850aa5e/"/>
-    <id>https://eyxxxxx.github.io/posts/850aa5e/</id>
+    <link href="https://eyxxxxx.github.io/posts/The%20administrator%20has%20closed%20the%20list%20of%20recent%20documents./"/>
+    <id>https://eyxxxxx.github.io/posts/The%20administrator%20has%20closed%20the%20list%20of%20recent%20documents./</id>
     <published>2021-03-02T08:36:30.261Z</published>
-    <updated>2021-03-03T06:43:26.371Z</updated>
+    <updated>2021-03-04T06:06:52.238Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;ol&gt;
