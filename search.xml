@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/posts/undefined/</url>
+    <url>/posts/4a17b156/</url>
     <content><![CDATA[<h2 id="How-to-create-a-blog-based-on-Hexo"><a href="#How-to-create-a-blog-based-on-Hexo" class="headerlink" title="How to create a blog based on Hexo?"></a>How to create a blog based on Hexo?</h2><p>A word tutorial or a video tutorial, choose the one that you like:</p>
 <ul>
 <li><a href="https://ryanluoxu.github.io/2017/11/24/%E7%94%A8-Hexo-%E5%92%8C-GitHub-Pages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2">用 Hexo 和 GitHub Pages 搭建博客</a></li>
@@ -34,39 +34,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo-其它问题-1</title>
-    <url>/posts/24000/</url>
-    <content><![CDATA[<p>我搭建博客过程中碰到过的一些问题</p>
-<h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><p>OS: Win10<br>Hexo theme： NexT<br>NexT: v7.8.0    &emsp; (FYI: NexT 最新版为v8.0.0)</p>
-<a id="more"></a>
-
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>以下未特别声明时皆修改NexT主题的主题配置文件_config.yml文件. 在_config.yml中搜索关键词完成相关任务.<br>注意区别<strong>主题配置文件</strong>与<strong>站点配置文件</strong>.</p>
-<h2 id="具体内容"><a href="#具体内容" class="headerlink" title="具体内容"></a>具体内容</h2><h3 id="hexo-deploy-时每次要输入账号密码"><a href="#hexo-deploy-时每次要输入账号密码" class="headerlink" title="hexo deploy 时每次要输入账号密码"></a>hexo deploy 时每次要输入账号密码</h3><p>repository: 应填写<code>git@github.com:username/username.github.io.git</code>. (以保证使用SSH协议)</p>
-<p>例如: </p>
-<blockquote>
-<p>deploy:<br>&emsp;type: git<br>&emsp;repository: <code>git@github.com:Eyxxxxx/Eyxxxxx.github.io.git</code><br>&emsp;branch: master</p>
-</blockquote>
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><ul>
-<li><code>repository</code> 不应写为<code>https://github.com/Eyxxxxx/Eyxxxxx.github.io.git</code> ←这是用https协议的, 会需要每次输入账号密码. </li>
-<li>每一项的英文冒号后面皆有空格, 不应错删或者使用错误的符号. </li>
-<li><strong>若此处<code>deploy</code>更改完仍有问题, 注意检查是否成功部署GitHub的SSH配置</strong> <a href="https://blog.csdn.net/hustpzb/article/details/8230454">参考链接 - Git SSH Key 生成步骤</a></li>
-<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%87%AD%E8%AF%81%E5%AD%98%E5%82%A8">其他参考 - Git 工具 - 凭证存储</a></li>
-</ul>
-<h3 id="看板娘-live2d-与访客统计冲突"><a href="#看板娘-live2d-与访客统计冲突" class="headerlink" title="看板娘(live2d)与访客统计冲突"></a>看板娘(live2d)与访客统计冲突</h3><p>添加看板娘会使得不蒜子统计访客和访问量失效, 修复方法见参考链接(不同主题应该都不能避免这两个插件冲突, 但是不同主题的解决方法不一样, 下面链接是适用于NexT主题的).</p>
-<p><a href="https://www.zywvvd.com/2020/03/09/next/13_busuanzi_fix_for_live2d/next-busuanzi-fix-live2d/">Next -13- 修复由于添加 live2D 造成的不蒜子统计失效 | 又见苍岚</a></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-        <category>基于NexT主题的环境配置</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>record</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo-功能添加-1</title>
-    <url>/posts/undefined/</url>
+    <url>/posts/e0f4965c/</url>
     <content><![CDATA[<p>介绍一些博客基础功能的配置</p>
 <h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><p>OS: Win10<br>Hexo theme： NexT<br>NexT: v7.8.0    &emsp; (FYI: NexT 最新版为v8.0.0)</p>
 <a id="more"></a>
@@ -139,6 +108,37 @@
 <li><a href="http://www.zhangzhiqiang.net/posts/adc6bd4c.html">Hexo 进阶 NexT 主题配置 | 南风未起</a></li>
 <li><a href="https://www.zywvvd.com/categories/Next/">Category: Next | 又见苍岚</a></li>
 </ol>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+        <category>基于NexT主题的环境配置</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>record</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-其它问题-1</title>
+    <url>/posts/24000/</url>
+    <content><![CDATA[<p>我搭建博客过程中碰到过的一些问题</p>
+<h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><p>OS: Win10<br>Hexo theme： NexT<br>NexT: v7.8.0    &emsp; (FYI: NexT 最新版为v8.0.0)</p>
+<a id="more"></a>
+
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>以下未特别声明时皆修改NexT主题的主题配置文件_config.yml文件. 在_config.yml中搜索关键词完成相关任务.<br>注意区别<strong>主题配置文件</strong>与<strong>站点配置文件</strong>.</p>
+<h2 id="具体内容"><a href="#具体内容" class="headerlink" title="具体内容"></a>具体内容</h2><h3 id="hexo-deploy-时每次要输入账号密码"><a href="#hexo-deploy-时每次要输入账号密码" class="headerlink" title="hexo deploy 时每次要输入账号密码"></a>hexo deploy 时每次要输入账号密码</h3><p>repository: 应填写<code>git@github.com:username/username.github.io.git</code>. (以保证使用SSH协议)</p>
+<p>例如: </p>
+<blockquote>
+<p>deploy:<br>&emsp;type: git<br>&emsp;repository: <code>git@github.com:Eyxxxxx/Eyxxxxx.github.io.git</code><br>&emsp;branch: master</p>
+</blockquote>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><ul>
+<li><code>repository</code> 不应写为<code>https://github.com/Eyxxxxx/Eyxxxxx.github.io.git</code> ←这是用https协议的, 会需要每次输入账号密码. </li>
+<li>每一项的英文冒号后面皆有空格, 不应错删或者使用错误的符号. </li>
+<li><strong>若此处<code>deploy</code>更改完仍有问题, 注意检查是否成功部署GitHub的SSH配置</strong> <a href="https://blog.csdn.net/hustpzb/article/details/8230454">参考链接 - Git SSH Key 生成步骤</a></li>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%87%AD%E8%AF%81%E5%AD%98%E5%82%A8">其他参考 - Git 工具 - 凭证存储</a></li>
+</ul>
+<h3 id="看板娘-live2d-与访客统计冲突"><a href="#看板娘-live2d-与访客统计冲突" class="headerlink" title="看板娘(live2d)与访客统计冲突"></a>看板娘(live2d)与访客统计冲突</h3><p>添加看板娘会使得不蒜子统计访客和访问量失效, 修复方法见参考链接(不同主题应该都不能避免这两个插件冲突, 但是不同主题的解决方法不一样, 下面链接是适用于NexT主题的).</p>
+<p><a href="https://www.zywvvd.com/2020/03/09/next/13_busuanzi_fix_for_live2d/next-busuanzi-fix-live2d/">Next -13- 修复由于添加 live2D 造成的不蒜子统计失效 | 又见苍岚</a></p>
 ]]></content>
       <categories>
         <category>Hexo</category>
