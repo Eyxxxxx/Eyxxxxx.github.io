@@ -6,7 +6,7 @@
   <link href="https://eyxxxxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://eyxxxxx.github.io/"/>
-  <updated>2021-03-07T13:29:12.285Z</updated>
+  <updated>2021-03-24T12:48:52.935Z</updated>
   <id>https://eyxxxxx.github.io/</id>
   
   <author>
@@ -17,20 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>python-安装mxnet库</title>
+    <link href="https://eyxxxxx.github.io/posts/install%20mxnet%20in%20python/"/>
+    <id>https://eyxxxxx.github.io/posts/install%20mxnet%20in%20python/</id>
+    <published>2021-03-23T15:24:38.839Z</published>
+    <updated>2021-03-24T12:48:52.935Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h2&gt;&lt;p&gt;win10 64位&lt;br&gt;&lt;strong&gt;Python 3.8.2&lt;/strong&gt; (tags/v3.8.2:7b3ab59, Feb 25 2020, 23:03:10) [MSC v.1916 64 bit (AMD64)] on win32&lt;br&gt;pip 20.2.4 (这个东西的版本在这里应该不重要, 有就行)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注: mxnet有很多装法, 包括基于GPU的、基于CPU和GPU的等, 我应该是配了一个基于CPU的最简单的环境.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;使用&lt;code&gt;pip install mxnet&lt;/code&gt;无法成功安装mxnet模块&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="村口修电脑" scheme="https://eyxxxxx.github.io/categories/%E6%9D%91%E5%8F%A3%E4%BF%AE%E7%94%B5%E8%84%91/"/>
+    
+    
+    <category term="python" scheme="https://eyxxxxx.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>考研-初试</title>
     <link href="https://eyxxxxx.github.io/posts/Unified%20National%20Graduate%20Entrance%20Examination%201/"/>
     <id>https://eyxxxxx.github.io/posts/Unified%20National%20Graduate%20Entrance%20Examination%201/</id>
     <published>2021-03-04T05:59:45.671Z</published>
-    <updated>2021-03-07T13:29:12.285Z</updated>
+    <updated>2021-03-24T06:58:43.856Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;免责声明: 若因本人的任何建议而导致最终发挥失常的本人概不负责.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;本贴只讲述本人复习期间实际做过的事情和从成绩结果出发的反思总结, &lt;strong&gt;总的回顾来看我这波复习操作比较迷&lt;/strong&gt;, 仅供感觉自己要来不及学且目标院校不是清北复交那么高不可攀的同学参考, 请结合自身情况按需采纳, &lt;strong&gt;非常建议配合其它经验贴食用.&lt;/strong&gt;  &lt;/p&gt;
+&lt;p&gt;篇幅较长, 建议电脑观看.&lt;/p&gt;
+&lt;h2 id=&quot;个人基础介绍&quot;&gt;&lt;a href=&quot;#个人基础介绍&quot; class=&quot;headerlink&quot; title=&quot;个人基础介绍&quot;&gt;&lt;/a&gt;个人基础介绍&lt;/h2&gt;&lt;p&gt;记性还可以, 心比较大. 企图通过每一遍多花点时间认真学来取得别人多学好几遍的效果.  (不学很多遍实际上是因为时间来不及)&lt;br&gt;101-政治: 因为高考需要在高中正经学过政治, 对政治的感觉比较好.&lt;br&gt;201-英语: 大学两年几乎不碰英语六级裸考590+.&lt;br&gt;301-数学: 基础非常不牢, 一碰地动山摇.  (高数稀烂, 第一轮整了四个月, 主要头两个月是暑假在家比较咸鱼=^=)&lt;br&gt;824-专业课: 考数据结构和计网, 学校里第一遍学的时候自我感觉掌握的还可以.  &lt;/p&gt;</summary>
     
     
     
@@ -86,9 +104,9 @@
     <category term="基于NexT主题的环境配置" scheme="https://eyxxxxx.github.io/categories/Hexo/%E5%9F%BA%E4%BA%8ENexT%E4%B8%BB%E9%A2%98%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
     
-    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
-    
     <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
+    
+    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
     
   </entry>
   
@@ -110,9 +128,9 @@
     <category term="基于NexT主题的环境配置" scheme="https://eyxxxxx.github.io/categories/Hexo/%E5%9F%BA%E4%BA%8ENexT%E4%B8%BB%E9%A2%98%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
     
-    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
-    
     <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
+    
+    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
     
   </entry>
   
@@ -134,9 +152,9 @@
     <category term="基于NexT主题的环境配置" scheme="https://eyxxxxx.github.io/categories/Hexo/%E5%9F%BA%E4%BA%8ENexT%E4%B8%BB%E9%A2%98%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
     
-    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
-    
     <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
+    
+    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
     
   </entry>
   
@@ -145,7 +163,7 @@
     <link href="https://eyxxxxx.github.io/posts/Hello-world/"/>
     <id>https://eyxxxxx.github.io/posts/Hello-world/</id>
     <published>2021-01-17T08:42:30.774Z</published>
-    <updated>2021-03-06T16:54:11.457Z</updated>
+    <updated>2021-03-07T13:44:44.036Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;How-to-create-a-blog-based-on-Hexo&quot;&gt;&lt;a href=&quot;#How-to-create-a-blog-based-on-Hexo&quot; class=&quot;headerlink&quot; title=&quot;How to create a blog based on Hexo?&quot;&gt;&lt;/a&gt;How to create a blog based on Hexo?&lt;/h2&gt;&lt;p&gt;A word tutorial or a video tutorial, choose the one that you like:&lt;/p&gt;
@@ -159,9 +177,9 @@
     <category term="Hexo" scheme="https://eyxxxxx.github.io/categories/Hexo/"/>
     
     
-    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
-    
     <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
+    
+    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
     
   </entry>
   

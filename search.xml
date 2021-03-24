@@ -29,8 +29,39 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>record</tag>
         <tag>Hexo</tag>
+        <tag>record</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-其它问题-1</title>
+    <url>/posts/hexo%20problems1/</url>
+    <content><![CDATA[<p>我搭建博客过程中碰到过的一些问题</p>
+<h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><p>OS: Win10<br>Hexo theme： NexT<br>NexT: v7.8.0    &emsp; (FYI: NexT 最新版为v8.0.0)</p>
+<a id="more"></a>
+
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>以下未特别声明时皆修改NexT主题的主题配置文件_config.yml文件. 在_config.yml中搜索关键词完成相关任务.<br>注意区别<strong>主题配置文件</strong>与<strong>站点配置文件</strong>.</p>
+<h2 id="具体内容"><a href="#具体内容" class="headerlink" title="具体内容"></a>具体内容</h2><h3 id="hexo-deploy-时每次要输入账号密码"><a href="#hexo-deploy-时每次要输入账号密码" class="headerlink" title="hexo deploy 时每次要输入账号密码"></a>hexo deploy 时每次要输入账号密码</h3><p>repository: 应填写<code>git@github.com:username/username.github.io.git</code>. (以保证使用SSH协议)</p>
+<p>例如: </p>
+<blockquote>
+<p>deploy:<br>&emsp;type: git<br>&emsp;repository: <code>git@github.com:Eyxxxxx/Eyxxxxx.github.io.git</code><br>&emsp;branch: master</p>
+</blockquote>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><ul>
+<li><code>repository</code> 不应写为<code>https://github.com/Eyxxxxx/Eyxxxxx.github.io.git</code> ←这是用https协议的, 会需要每次输入账号密码. </li>
+<li>每一项的英文冒号后面皆有空格, 不应错删或者使用错误的符号. </li>
+<li><strong>若此处<code>deploy</code>更改完仍有问题, 注意检查是否成功部署GitHub的SSH配置</strong> <a href="https://blog.csdn.net/hustpzb/article/details/8230454">参考链接 - Git SSH Key 生成步骤</a></li>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%87%AD%E8%AF%81%E5%AD%98%E5%82%A8">其他参考 - Git 工具 - 凭证存储</a></li>
+</ul>
+<h3 id="看板娘-live2d-与访客统计冲突"><a href="#看板娘-live2d-与访客统计冲突" class="headerlink" title="看板娘(live2d)与访客统计冲突"></a>看板娘(live2d)与访客统计冲突</h3><p>添加看板娘会使得不蒜子统计访客和访问量失效, 修复方法见参考链接(不同主题应该都不能避免这两个插件冲突, 但是不同主题的解决方法不一样, 下面链接是适用于NexT主题的).</p>
+<p><a href="https://www.zywvvd.com/2020/03/09/next/13_busuanzi_fix_for_live2d/next-busuanzi-fix-live2d/">Next -13- 修复由于添加 live2D 造成的不蒜子统计失效 | 又见苍岚</a></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+        <category>基于NexT主题的环境配置</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>record</tag>
       </tags>
   </entry>
   <entry>
@@ -114,39 +145,8 @@
         <category>基于NexT主题的环境配置</category>
       </categories>
       <tags>
-        <tag>record</tag>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-其它问题-1</title>
-    <url>/posts/hexo%20problems1/</url>
-    <content><![CDATA[<p>我搭建博客过程中碰到过的一些问题</p>
-<h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><p>OS: Win10<br>Hexo theme： NexT<br>NexT: v7.8.0    &emsp; (FYI: NexT 最新版为v8.0.0)</p>
-<a id="more"></a>
-
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>以下未特别声明时皆修改NexT主题的主题配置文件_config.yml文件. 在_config.yml中搜索关键词完成相关任务.<br>注意区别<strong>主题配置文件</strong>与<strong>站点配置文件</strong>.</p>
-<h2 id="具体内容"><a href="#具体内容" class="headerlink" title="具体内容"></a>具体内容</h2><h3 id="hexo-deploy-时每次要输入账号密码"><a href="#hexo-deploy-时每次要输入账号密码" class="headerlink" title="hexo deploy 时每次要输入账号密码"></a>hexo deploy 时每次要输入账号密码</h3><p>repository: 应填写<code>git@github.com:username/username.github.io.git</code>. (以保证使用SSH协议)</p>
-<p>例如: </p>
-<blockquote>
-<p>deploy:<br>&emsp;type: git<br>&emsp;repository: <code>git@github.com:Eyxxxxx/Eyxxxxx.github.io.git</code><br>&emsp;branch: master</p>
-</blockquote>
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><ul>
-<li><code>repository</code> 不应写为<code>https://github.com/Eyxxxxx/Eyxxxxx.github.io.git</code> ←这是用https协议的, 会需要每次输入账号密码. </li>
-<li>每一项的英文冒号后面皆有空格, 不应错删或者使用错误的符号. </li>
-<li><strong>若此处<code>deploy</code>更改完仍有问题, 注意检查是否成功部署GitHub的SSH配置</strong> <a href="https://blog.csdn.net/hustpzb/article/details/8230454">参考链接 - Git SSH Key 生成步骤</a></li>
-<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%87%AD%E8%AF%81%E5%AD%98%E5%82%A8">其他参考 - Git 工具 - 凭证存储</a></li>
-</ul>
-<h3 id="看板娘-live2d-与访客统计冲突"><a href="#看板娘-live2d-与访客统计冲突" class="headerlink" title="看板娘(live2d)与访客统计冲突"></a>看板娘(live2d)与访客统计冲突</h3><p>添加看板娘会使得不蒜子统计访客和访问量失效, 修复方法见参考链接(不同主题应该都不能避免这两个插件冲突, 但是不同主题的解决方法不一样, 下面链接是适用于NexT主题的).</p>
-<p><a href="https://www.zywvvd.com/2020/03/09/next/13_busuanzi_fix_for_live2d/next-busuanzi-fix-live2d/">Next -13- 修复由于添加 live2D 造成的不蒜子统计失效 | 又见苍岚</a></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-        <category>基于NexT主题的环境配置</category>
-      </categories>
-      <tags>
         <tag>record</tag>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -214,8 +214,150 @@
         <category>基于NexT主题的环境配置</category>
       </categories>
       <tags>
-        <tag>record</tag>
         <tag>Hexo</tag>
+        <tag>record</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python-安装mxnet库</title>
+    <url>/posts/install%20mxnet%20in%20python/</url>
+    <content><![CDATA[<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>win10 64位<br><strong>Python 3.8.2</strong> (tags/v3.8.2:7b3ab59, Feb 25 2020, 23:03:10) [MSC v.1916 64 bit (AMD64)] on win32<br>pip 20.2.4 (这个东西的版本在这里应该不重要, 有就行)</p>
+<p><strong>注: mxnet有很多装法, 包括基于GPU的、基于CPU和GPU的等, 我应该是配了一个基于CPU的最简单的环境.</strong></p>
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>使用<code>pip install mxnet</code>无法成功安装mxnet模块</p>
+<a id="more"></a>
+
+<h2 id="重要链接-备份"><a href="#重要链接-备份" class="headerlink" title="重要链接(备份)"></a>重要链接(备份)</h2><ol>
+<li><a href="https://pypi.org/">PyPI · The Python Package Index</a></li>
+<li><a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">Python Extension Packages for Windows - Christoph Gohlke</a></li>
+<li><a href="https://blog.csdn.net/qq_35975447/article/details/94431904">windows python库wheel文件下载_聿默的博客-CSDN博客_python wheel下载</a></li>
+</ol>
+<h2 id="太长不看版-结论"><a href="#太长不看版-结论" class="headerlink" title="太长不看版-结论"></a>太长不看版-结论</h2><ul>
+<li>使用<code>pip show numpy</code>, 若已有numpy则使用<code>pip uninstall numpy</code>将其卸载</li>
+<li>打开上述<code>重要链接</code>中第二个链接. <code>ctrl+f</code>搜索MXNet, 选择合适版本下载. 再<code>ctrl+f</code> 搜索numpy选择1.19.5的合适版本下载.(我没试最新的1.20版)</li>
+<li>在下载了上述两个文件的目录下, 使用<code>pip install 下载的文件名.whl</code>进行安装. 例如: <code>pip install numpy-1.19.5+mkl-cp38-cp38-win_amd64.whl</code><ul>
+<li><strong>先安装 numpy</strong></li>
+<li>再安装 MXNet</li>
+</ul>
+</li>
+</ul>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
+    src="./python-安装mxnet/0.png">
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">图零</div>
+</center>
+
+<h2 id="详述原地绕两圈后解决问题的过程"><a href="#详述原地绕两圈后解决问题的过程" class="headerlink" title="详述原地绕两圈后解决问题的过程"></a>详述原地绕两圈后解决问题的过程</h2><p>注: 本人目前为止没有正经学过任何python知识. 只是奉行拿来主义, 所以底下的思路若显的兜圈子请轻嘲.</p>
+<ul>
+<li>使用<code>pip install mxnet</code>出现报错, 根据大红字上面的话初步判定是numpy安装失败导致mxnet安装失败. 于是试图先单独安装numpy.</li>
+</ul>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
+    src="./python-安装mxnet/1.png">
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">图一</div>
+</center>
+
+<ul>
+<li>一开始搜索关键词<code>Building wheel for numpy (setup.py) ... error</code> 没得到有用信息.</li>
+<li>改搜<code>numpy 的 wheel文件</code>发现下述第一个参考链接给出的第一个网址<a href="https://pypi.org/">PyPI · The Python Package Index</a>, 在其中搜索numpy, 选择下载文件时发现有cp37和cp38, 查阅发现是指python3.7和python3.8. 在<code>cmd</code>运行<code>python -V</code> 发现我的python是3.8.<blockquote>
+<blockquote>
+<p>参考链接</p>
+<ol>
+<li><a href="https://blog.csdn.net/qq_35975447/article/details/94431904">windows python库wheel文件下载_聿默的博客</a>.</li>
+<li><a href="https://blog.csdn.net/cvmat/article/details/53711732">Python下numpy不成功的解决办法（wheel方法安装，试用其他包）_cvMat的博客-CSDN博客</a></li>
+</ol>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
+    src="./python-安装mxnet/2.png">
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">图二</div>
+</center>
+
+<ul>
+<li>按照第二个参考链接的教程<code>pip install numpy-1.20.1-cp38-cp38-win_amd64.whl</code>, numpy安装成功了, 但是mxnet仍旧安装失败. 眼拙的我终于看到了绿框中的限制条件 <strong>(实际上图一中我画的第一个框里就有写=^=.)</strong></li>
+</ul>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
+    src="./python-安装mxnet/3.png">
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">图三</div>
+</center>
+
+<ul>
+<li>然后开始找旧版本的numpy, 惊喜的发现版本小于17.0.0的最高版本是16.6.0, 而该版本没有支持到python 3.8. <a href="https://pypi.org/project/numpy/1.16.6/#files">不信你看 -&gt; numpy · PyPI</a></li>
+<li>又查了一下numpy的版本问题找到<a href="https://blog.csdn.net/weixin_38145317/article/details/96475710">numpy 版本改换_shuijinghua的博客-CSDN博客_numpy版本</a>, 并按教程使用<code>pip install -U numpy==1.12.0</code> 果然报错.</li>
+</ul>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
+    src="./python-安装mxnet/4.png">
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">图四</div>
+</center>
+
+<ul>
+<li>然后我忘了怎么查到这篇文章了<a href="https://blog.csdn.net/weixin_44833985/article/details/108532630">Python安装Whl文件_hero的博客-CSDN博客</a>, 给出了这个重要的网址 <strong><a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">Python Extension Packages for Windows - Christoph Gohlke</a></strong>. 思路就是包管理器自动装搞不定咱就自己下whl文件手动搞(全手动可能要自己构建whl文件, 笔者目前是搞不懂这个的.)<ul>
+<li>(实际上前面第一个参考链接<a href="https://blog.csdn.net/qq_35975447/article/details/94431904">windows python库wheel文件下载_聿默的博客</a>中第二个网址就给的是这个…又是一个查资料太多不看完的惨痛教训= =|||)</li>
+</ul>
+</li>
+<li>打开网址<a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">Python Extension Packages for Windows - Christoph Gohlke</a>, <code>ctrl+f</code>搜索MXNet(图五), 看到有支持cp38的为父很欣慰, 点击下载. 看到requires, 再<code>ctrl+f</code> 搜索numpy如图六. 我没下最新版的也懒得再试了, 反正1.19.5的那个搞成功了.</li>
+</ul>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
+    src="./python-安装mxnet/5.png">
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">图五</div>
+</center>
+
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
+    src="./python-安装mxnet/6.png">
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">图六</div>
+</center>
+
+<h2 id="反思总结"><a href="#反思总结" class="headerlink" title="反思总结"></a>反思总结</h2><ul>
+<li>python的依赖是具体到版本的, 有些模块并不支持其依赖的最新版本.</li>
+<li>python的模块也对python的版本有详细要求.</li>
+<li>这模块可能本来是要自己构建编译的, 但是我找到了一个网站有人做好了这些事?<ul>
+<li>自己构建太麻烦了…..这儿将就搞搞能给王**完成作业就成</li>
+</ul>
+</li>
+<li>查资料时候开网页太多但不看完. 导致找到最后的某个网页发现了想要的信息其实在开头的网页里就有写, 顶多是开头的写在下面一点.</li>
+</ul>
+<hr>
+<p>本次村口修电脑累计耗时约1h, 撰写本文累计耗时3h? (/doge</p>
+]]></content>
+      <categories>
+        <category>村口修电脑</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -280,6 +422,8 @@
 <p>本贴只讲述本人复习期间实际做过的事情和从成绩结果出发的反思总结, <strong>总的回顾来看我这波复习操作比较迷</strong>, 仅供感觉自己要来不及学且目标院校不是清北复交那么高不可攀的同学参考, 请结合自身情况按需采纳, <strong>非常建议配合其它经验贴食用.</strong>  </p>
 <p>篇幅较长, 建议电脑观看.</p>
 <h2 id="个人基础介绍"><a href="#个人基础介绍" class="headerlink" title="个人基础介绍"></a>个人基础介绍</h2><p>记性还可以, 心比较大. 企图通过每一遍多花点时间认真学来取得别人多学好几遍的效果.  (不学很多遍实际上是因为时间来不及)<br>101-政治: 因为高考需要在高中正经学过政治, 对政治的感觉比较好.<br>201-英语: 大学两年几乎不碰英语六级裸考590+.<br>301-数学: 基础非常不牢, 一碰地动山摇.  (高数稀烂, 第一轮整了四个月, 主要头两个月是暑假在家比较咸鱼=^=)<br>824-专业课: 考数据结构和计网, 学校里第一遍学的时候自我感觉掌握的还可以.  </p>
+<a id="more"></a>
+
 <h2 id="主要情况"><a href="#主要情况" class="headerlink" title="主要情况"></a>主要情况</h2><ul>
 <li>全程复习以网课为主, 合计大约听了150h课时的网课, 但是因强迫症懒得换老师所以听过的老师很有限.<ul>
 <li>听视频网课的方法是: 集中注意力, 开高倍速(potplayer播放器) + 回放.<br>虽然最后两个小时的课还是可能需要听到接近两个小时, 数学可能更久一点, 但是这些知识点一遍听完课就算过, 不会再反复复习或者去墙角背书, <strong>仅在刷题错了的时候会把有问题的地方都翻书找到相关的知识点.</strong>  </li>
@@ -1000,7 +1144,7 @@
 <p>早上不敢喝太多水, 因为起的晚吃的晚, 怕考试或者去了考场之后跑厕所贼麻烦. 晚上不多吃点怕第二天饿着考不动, 而且消化的时间长一点, 也不急着去考试就还好<br>反正看个人的习惯吧. (我带去的泡面和自嗨锅完全没用上2333)</p>
 <p>酒店我是住到礼拜一早上回来的. 就是考完还多睡一个晚上. 感觉这样心定一点.</p>
 <hr>
-<p>以上,<br>感谢观看, 完结撒花~</p>
+<p>以上,<br>感谢阅读, 完结撒花~</p>
 ]]></content>
       <categories>
         <category>反思总结</category>
