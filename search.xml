@@ -227,7 +227,7 @@
   </entry>
   <entry>
     <title>word-管理员已关闭最近文档列表</title>
-    <url>/posts/The%20administrator%20has%20closed%20the%20list%20of%20recent%20documents./</url>
+    <url>/posts/The%20administrator%20has%20closed%20the%20list%20of%20recent%20documents/</url>
     <content><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><ol>
 <li><p><code>word - 打开 - 最近 - 文档/文件夹</code> 显示：<br><code>您的管理员已关闭最近文档列表。请选择一个浏览文档的位置。</code></p>
 </li>
