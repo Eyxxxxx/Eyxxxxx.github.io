@@ -6,7 +6,7 @@
   <link href="https://eyxxxxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://eyxxxxx.github.io/"/>
-  <updated>2021-03-25T06:03:37.266Z</updated>
+  <updated>2021-03-25T07:22:36.643Z</updated>
   <id>https://eyxxxxx.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo-问题2-看板娘(live2d)与不蒜子的访客统计冲突</title>
+    <link href="https://eyxxxxx.github.io/posts/live2d%20conflicts%20with.%20busuanzi&#39;%20visitor%20statistics/"/>
+    <id>https://eyxxxxx.github.io/posts/live2d%20conflicts%20with.%20busuanzi&#39;%20visitor%20statistics/</id>
+    <published>2021-03-25T06:19:15.529Z</published>
+    <updated>2021-03-25T07:22:36.643Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot; title=&quot;环境说明&quot;&gt;&lt;/a&gt;环境说明&lt;/h2&gt;&lt;p&gt;OS: Win10&lt;br&gt;Hexo theme： NexT&lt;br&gt;NexT: v7.8.0    &amp;emsp; (FYI: NexT 最新版为v8.0.0)&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://eyxxxxx.github.io/categories/Hexo/"/>
+    
+    <category term="Q&amp;A" scheme="https://eyxxxxx.github.io/categories/Hexo/Q-A/"/>
+    
+    
+    <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
+    
+    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
+    
+  </entry>
   
   <entry>
     <title>python-安装mxnet库</title>
@@ -87,15 +110,14 @@
   </entry>
   
   <entry>
-    <title>Hexo-其它问题-1</title>
+    <title>Hexo-问题1-hexo deploy 时每次要输入账号密码</title>
     <link href="https://eyxxxxx.github.io/posts/hexo%20deploy%20needs%20account%20and%20password%20all%20the%20time/"/>
     <id>https://eyxxxxx.github.io/posts/hexo%20deploy%20needs%20account%20and%20password%20all%20the%20time/</id>
     <published>2021-01-25T03:15:34.286Z</published>
-    <updated>2021-03-25T06:18:14.018Z</updated>
+    <updated>2021-03-25T06:42:27.282Z</updated>
     
     
-    <summary type="html">&lt;p&gt;我搭建博客过程中碰到过的一些问题&lt;/p&gt;
-&lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot; title=&quot;环境说明&quot;&gt;&lt;/a&gt;环境说明&lt;/h2&gt;&lt;p&gt;OS: Win10&lt;br&gt;Hexo theme： NexT&lt;br&gt;NexT: v7.8.0    &amp;emsp; (FYI: NexT 最新版为v8.0.0)&lt;/p&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot; title=&quot;环境说明&quot;&gt;&lt;/a&gt;环境说明&lt;/h2&gt;&lt;p&gt;OS: Win10&lt;br&gt;Hexo theme： NexT&lt;br&gt;NexT: v7.8.0    &amp;emsp; (FYI: NexT 最新版为v8.0.0)&lt;/p&gt;</summary>
     
     
     
