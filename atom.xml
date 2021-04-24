@@ -6,7 +6,7 @@
   <link href="https://eyxxxxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://eyxxxxx.github.io/"/>
-  <updated>2021-03-25T08:19:44.240Z</updated>
+  <updated>2021-04-24T08:33:04.649Z</updated>
   <id>https://eyxxxxx.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo-问题4-站点标题的hover修改</title>
+    <link href="https://eyxxxxx.github.io/posts/add%20or%20disable%20hover%20to%20site-title/"/>
+    <id>https://eyxxxxx.github.io/posts/add%20or%20disable%20hover%20to%20site-title/</id>
+    <published>2021-04-24T07:42:48.761Z</published>
+    <updated>2021-04-24T08:33:04.649Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot; title=&quot;环境说明&quot;&gt;&lt;/a&gt;环境说明&lt;/h2&gt;&lt;p&gt;hexo: 5.3.0&lt;br&gt;hexo-cli: 4.2.0&lt;br&gt;os: Windows_NT 10.0.19042 win32 x64&lt;br&gt;node: 14.16.1&lt;/p&gt;
+&lt;p&gt;使用VScode作为编辑器.&lt;/p&gt;
+&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;鼠标悬浮在站点标题处, 每个字之间会产生空格(现已删除该效果)&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://eyxxxxx.github.io/categories/Hexo/"/>
+    
+    <category term="Q&amp;A" scheme="https://eyxxxxx.github.io/categories/Hexo/Q-A/"/>
+    
+    
+    <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
+    
+    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo-问题3-文章中引用本地图片的方法</title>
@@ -172,7 +197,7 @@
     <link href="https://eyxxxxx.github.io/posts/hexo%20css1/"/>
     <id>https://eyxxxxx.github.io/posts/hexo%20css1/</id>
     <published>2021-01-25T02:53:33.698Z</published>
-    <updated>2021-03-06T16:55:16.778Z</updated>
+    <updated>2021-04-24T08:27:45.673Z</updated>
     
     
     <summary type="html">&lt;p&gt;介绍一些可有可无的博客美化(基础美化)&lt;/p&gt;

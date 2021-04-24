@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://Eyxxxxx.github.io/posts/add%20or%20disable%20hover%20to%20site-title/</loc>
+    <lastmod>2021-04-24</lastmod>
+  </url>
+  <url>
+    <loc>https://Eyxxxxx.github.io/posts/hexo%20css1/</loc>
+    <lastmod>2021-04-24</lastmod>
+  </url>
+  <url>
     <loc>https://Eyxxxxx.github.io/posts/install%20mxnet%20in%20python/</loc>
     <lastmod>2021-03-25</lastmod>
   </url>
@@ -30,10 +38,6 @@
   </url>
   <url>
     <loc>https://Eyxxxxx.github.io/posts/hexo%20functions1/</loc>
-    <lastmod>2021-03-06</lastmod>
-  </url>
-  <url>
-    <loc>https://Eyxxxxx.github.io/posts/hexo%20css1/</loc>
     <lastmod>2021-03-06</lastmod>
   </url>
 </urlset> 
