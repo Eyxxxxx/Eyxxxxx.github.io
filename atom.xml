@@ -79,10 +79,10 @@
     <link href="https://eyxxxxx.github.io/posts/install%20mxnet%20in%20python/"/>
     <id>https://eyxxxxx.github.io/posts/install%20mxnet%20in%20python/</id>
     <published>2021-03-23T15:24:38.839Z</published>
-    <updated>2021-03-25T08:19:27.573Z</updated>
+    <updated>2021-03-25T13:11:32.752Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h2&gt;&lt;p&gt;win10 64位&lt;br&gt;&lt;strong&gt;Python 3.8.2&lt;/strong&gt; (tags/v3.8.2:7b3ab59, Feb 25 2020, 23:03:10) [MSC v.1916 64 bit (AMD64)] on win32&lt;br&gt;pip 20.2.4 (这个东西的版本在这里应该不重要, 有就行)&lt;/p&gt;
+    <summary type="html">&lt;h2 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h2&gt;&lt;p&gt;win10 64位&lt;br&gt;&lt;strong&gt;Python 3.8.2&lt;/strong&gt; [MSC v.1916 64 bit (AMD64)] on win32&lt;br&gt;pip 20.2.4 (这个东西的版本在这里应该不重要, 有就行)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;注: mxnet有很多装法, 包括基于GPU的、基于CPU和GPU的等, 我应该是配了一个基于CPU的最简单的环境.&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;使用&lt;code&gt;pip install mxnet&lt;/code&gt;无法成功安装mxnet模块&lt;/p&gt;</summary>
     
