@@ -32,7 +32,7 @@
 <meta property="og:description" content="环境说明hexo: 5.3.0hexo-cli: 4.2.0os: Windows_NT 10.0.19042 win32 x64node: 14.16.1 使用VScode作为编辑器. 问题描述鼠标悬浮在站点标题处, 每个字之间会产生空格(现已删除该效果)">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-04-24T07:42:48.761Z">
-<meta property="article:modified_time" content="2021-04-24T08:33:04.649Z">
+<meta property="article:modified_time" content="2021-04-24T08:45:06.326Z">
 <meta property="article:author" content="yx">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="record">
@@ -220,7 +220,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-04-24 15:42:48 / 修改时间：16:33:04" itemprop="dateCreated datePublished" datetime="2021-04-24T15:42:48+08:00">2021-04-24</time>
+              <time title="创建时间：2021-04-24 15:42:48 / 修改时间：16:45:06" itemprop="dateCreated datePublished" datetime="2021-04-24T15:42:48+08:00">2021-04-24</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -261,7 +261,12 @@
 
 <h2 id="原因及解决方案"><a href="#原因及解决方案" class="headerlink" title="原因及解决方案"></a>原因及解决方案</h2><p>在本博客的<a href="https://eyxxxxx.github.io/posts/hexo%20css1/">Hexo-界面美化-1 | Dig a Big Hole</a>第四点中提到, <strong>本博客按教程修改后使用自定义样式.</strong> 在本人的样式文件中有这样一段代码</p>
 <figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置侧边栏网站标题鼠标悬浮样式</span></span><br><span class="line"><span class="selector-class">.site-title</span>:hover &#123;</span><br><span class="line"> <span class="attribute">letter-spacing</span>: <span class="number">0.4rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注释掉即可解决问题.<br>同理大家可依此给各模块定制自己喜欢的hover.</p>
+<ol>
+<li>注释掉这段.</li>
+<li>在使用<code>hexo g &amp;&amp; hexo d</code> 部署之前, <strong>需先执行<code>hexo clean</code></strong></li>
+<li><strong>生效!</strong></li>
+</ol>
+<p>同理, 大家可依此给各模块定制自己喜欢的炫酷hover.</p>
 <p>PS: 该样式文件位于<code>.\Dig_a_Big_Hole\source\_data\styles.styl</code>, 即, 是在站点配置文件的source目录下而非主题配置文件的source目录下!<br>主题的swig文件在<code>.\Dig_a_Big_Hole\themes\next\layout\_partials</code>中.</p>
 <p>PPS: 此文前提是使用了自定义样式文件, 否则应当去swig文件中寻找修改情况.</p>
 <h2 id="反思总结"><a href="#反思总结" class="headerlink" title="反思总结"></a>反思总结</h2><ul>

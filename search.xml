@@ -34,6 +34,90 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo-问题1-hexo deploy 时每次要输入账号密码</title>
+    <url>/posts/hexo%20deploy%20needs%20account%20and%20password%20all%20the%20time/</url>
+    <content><![CDATA[<h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><p>hexo: 5.3.0<br>hexo-cli: 4.2.0<br>os: Windows_NT 10.0.19042 win32 x64<br>node: 12.20.0</p>
+<a id="more"></a>
+
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>本次修改站点配置文件_config.yml文件. 在_config.yml中搜索关键词完成相关任务.<br>注意区别<strong>主题配置文件</strong>与<strong>站点配置文件</strong>.</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>搜索<code>站点配置文件_config.yml</code>中的repository项<br>repository: 应填写<code>git@github.com:username/username.github.io.git</code>. (以保证使用SSH协议)</p>
+<p>例如:</p>
+<blockquote>
+<p>deploy:<br>&emsp;type: git<br>&emsp;repository: <code>git@github.com:Eyxxxxx/Eyxxxxx.github.io.git</code><br>&emsp;branch: master</p>
+</blockquote>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ul>
+<li><code>repository</code> 不应写为 <code>https://github.com/Eyxxxxx/Eyxxxxx.github.io.git</code> ←这是用https协议的, 会需要每次输入账号密码.</li>
+<li>每一项的英文冒号后面皆有空格, 不应错删或者使用错误的符号.</li>
+<li><strong>若此处<code>deploy</code>更改完仍有问题, 注意检查是否成功部署GitHub的SSH配置</strong> <a href="https://blog.csdn.net/hustpzb/article/details/8230454">参考链接 - Git SSH Key 生成步骤</a></li>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%87%AD%E8%AF%81%E5%AD%98%E5%82%A8">其他参考 - Git 工具 - 凭证存储</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+        <category>Q&amp;A</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>record</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-问题2-看板娘(live2d)与不蒜子的访客统计冲突</title>
+    <url>/posts/live2d%20conflicts%20with%20busuanzi&#39;%20visitor%20statistics/</url>
+    <content><![CDATA[<h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><p>OS: Win10<br>Hexo theme： NexT<br>NexT: v7.8.0    &emsp; (FYI: NexT 最新版为v8.0.0)</p>
+<a id="more"></a>
+
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>修改配置文件时注意区别<strong>主题配置文件</strong>与<strong>站点配置文件</strong>.</p>
+<h2 id="看板娘-live2d-与不蒜子的访客统计冲突"><a href="#看板娘-live2d-与不蒜子的访客统计冲突" class="headerlink" title="看板娘(live2d)与不蒜子的访客统计冲突"></a>看板娘(live2d)与不蒜子的访客统计冲突</h2><p>添加看板娘会使得不蒜子统计访客和访问量失效, 修复方法见参考链接(不同主题应该都不能避免这两个插件冲突, 但是不同主题的解决方法不一样, 下面链接是适用于NexT主题的).</p>
+<p><a href="https://www.zywvvd.com/2020/03/09/next/13_busuanzi_fix_for_live2d/next-busuanzi-fix-live2d/">Next -13- 修复由于添加 live2D 造成的不蒜子统计失效 | 又见苍岚</a></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+        <category>Q&amp;A</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>record</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-问题4-站点标题的hover修改</title>
+    <url>/posts/add%20or%20disable%20hover%20to%20site-title/</url>
+    <content><![CDATA[<h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><p>hexo: 5.3.0<br>hexo-cli: 4.2.0<br>os: Windows_NT 10.0.19042 win32 x64<br>node: 14.16.1</p>
+<p>使用VScode作为编辑器.</p>
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>鼠标悬浮在站点标题处, 每个字之间会产生空格(现已删除该效果)</p>
+<a id="more"></a>
+
+<h2 id="原因及解决方案"><a href="#原因及解决方案" class="headerlink" title="原因及解决方案"></a>原因及解决方案</h2><p>在本博客的<a href="https://eyxxxxx.github.io/posts/hexo%20css1/">Hexo-界面美化-1 | Dig a Big Hole</a>第四点中提到, <strong>本博客按教程修改后使用自定义样式.</strong> 在本人的样式文件中有这样一段代码</p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 设置侧边栏网站标题鼠标悬浮样式</span></span><br><span class="line"><span class="selector-class">.site-title</span>:hover &#123;</span><br><span class="line"> <span class="attribute">letter-spacing</span>: <span class="number">0.4rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>注释掉这段.</li>
+<li>在使用<code>hexo g &amp;&amp; hexo d</code> 部署之前, <strong>需先执行<code>hexo clean</code></strong></li>
+<li><strong>生效!</strong></li>
+</ol>
+<p>同理, 大家可依此给各模块定制自己喜欢的炫酷hover.</p>
+<p>PS: 该样式文件位于<code>.\Dig_a_Big_Hole\source\_data\styles.styl</code>, 即, 是在站点配置文件的source目录下而非主题配置文件的source目录下!<br>主题的swig文件在<code>.\Dig_a_Big_Hole\themes\next\layout\_partials</code>中.</p>
+<p>PPS: 此文前提是使用了自定义样式文件, 否则应当去swig文件中寻找修改情况.</p>
+<h2 id="反思总结"><a href="#反思总结" class="headerlink" title="反思总结"></a>反思总结</h2><ul>
+<li>本博客站点设置了使用自定义样式文件, 即使用styles.styl文件, 不使用站点默认的swig文件(注意区分站点swig文件和主题swig文件).</li>
+<li>抄代码一时爽, debug火葬场.<ul>
+<li>刚建站的时候, 想要做一些基础的美化, 比如页面的滑动条的样式修改. 然后发现有人把自己做的所有的美化及其styl代码pose上来了, <strong>人家确实配了说明注释. 但是因为太多了, 我就敷衍的大概看了看,</strong> 挑了一些粘进了自己的styl文件里.</li>
+<li>然后又因为业务不熟练(CSS, html等一概不通), 不知道什么文件管哪部分样式的修改. 这个效果涉及hover代码我确实很早就查出来了. 但是就不知道在哪个文件里用的&gt;_&lt;|||.</li>
+</ul>
+</li>
+<li>基于此可以看到, <strong>对一切修改配置做留档记录是便于日后追溯的.</strong></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+        <category>Q&amp;A</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>record</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo-问题3-文章中引用本地图片的方法</title>
     <url>/posts/quote%20local%20images%20in%20hexo%20articles/</url>
     <content><![CDATA[<h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><p>hexo: 5.3.0<br>hexo-cli: 4.2.0<br>os: Windows_NT 10.0.19042 win32 x64<br>node: 12.20.0</p>
@@ -74,85 +158,6 @@
 <h2 id="反思总结"><a href="#反思总结" class="headerlink" title="反思总结"></a>反思总结</h2><p>下载GitHub上的东西出现问题的时候, 应该多看看issues板块, 看看是否有人已经提出过类似问题是否有给出解决措施.</p>
 <h2 id="附-本文中插入图片使用的代码"><a href="#附-本文中插入图片使用的代码" class="headerlink" title="附: 本文中插入图片使用的代码"></a>附: 本文中插入图片使用的代码</h2><p><code>Hexo-问题3-文章中引用本地图片的方法</code>为本文md文件的文件名.</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">center</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;img style=&quot;border-radius: 0.3125em;</span></span><br><span class="line"><span class="code">    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);&quot;</span></span><br><span class="line"><span class="code">    src=&quot;./Hexo-问题3-文章中引用本地图片的方法/1.png&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;div style=&quot;color:orange; border-bottom: 1px solid #d9d9d9;</span></span><br><span class="line"><span class="code">    display: inline-block;</span></span><br><span class="line"><span class="code">    color: #999;</span></span><br><span class="line"><span class="code">    padding: 2px;&quot;&gt;图一&lt;/div&gt;</span></span><br><span class="line"><span class="code">&lt;/center&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Hexo</category>
-        <category>Q&amp;A</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>record</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-问题2-看板娘(live2d)与不蒜子的访客统计冲突</title>
-    <url>/posts/live2d%20conflicts%20with%20busuanzi&#39;%20visitor%20statistics/</url>
-    <content><![CDATA[<h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><p>OS: Win10<br>Hexo theme： NexT<br>NexT: v7.8.0    &emsp; (FYI: NexT 最新版为v8.0.0)</p>
-<a id="more"></a>
-
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>修改配置文件时注意区别<strong>主题配置文件</strong>与<strong>站点配置文件</strong>.</p>
-<h2 id="看板娘-live2d-与不蒜子的访客统计冲突"><a href="#看板娘-live2d-与不蒜子的访客统计冲突" class="headerlink" title="看板娘(live2d)与不蒜子的访客统计冲突"></a>看板娘(live2d)与不蒜子的访客统计冲突</h2><p>添加看板娘会使得不蒜子统计访客和访问量失效, 修复方法见参考链接(不同主题应该都不能避免这两个插件冲突, 但是不同主题的解决方法不一样, 下面链接是适用于NexT主题的).</p>
-<p><a href="https://www.zywvvd.com/2020/03/09/next/13_busuanzi_fix_for_live2d/next-busuanzi-fix-live2d/">Next -13- 修复由于添加 live2D 造成的不蒜子统计失效 | 又见苍岚</a></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-        <category>Q&amp;A</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>record</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-问题4-站点标题的hover修改</title>
-    <url>/posts/add%20or%20disable%20hover%20to%20site-title/</url>
-    <content><![CDATA[<h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><p>hexo: 5.3.0<br>hexo-cli: 4.2.0<br>os: Windows_NT 10.0.19042 win32 x64<br>node: 14.16.1</p>
-<p>使用VScode作为编辑器.</p>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>鼠标悬浮在站点标题处, 每个字之间会产生空格(现已删除该效果)</p>
-<a id="more"></a>
-
-<h2 id="原因及解决方案"><a href="#原因及解决方案" class="headerlink" title="原因及解决方案"></a>原因及解决方案</h2><p>在本博客的<a href="https://eyxxxxx.github.io/posts/hexo%20css1/">Hexo-界面美化-1 | Dig a Big Hole</a>第四点中提到, <strong>本博客按教程修改后使用自定义样式.</strong> 在本人的样式文件中有这样一段代码</p>
-<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 设置侧边栏网站标题鼠标悬浮样式</span></span><br><span class="line"><span class="selector-class">.site-title</span>:hover &#123;</span><br><span class="line"> <span class="attribute">letter-spacing</span>: <span class="number">0.4rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注释掉即可解决问题.<br>同理大家可依此给各模块定制自己喜欢的hover.</p>
-<p>PS: 该样式文件位于<code>.\Dig_a_Big_Hole\source\_data\styles.styl</code>, 即, 是在站点配置文件的source目录下而非主题配置文件的source目录下!<br>主题的swig文件在<code>.\Dig_a_Big_Hole\themes\next\layout\_partials</code>中.</p>
-<p>PPS: 此文前提是使用了自定义样式文件, 否则应当去swig文件中寻找修改情况.</p>
-<h2 id="反思总结"><a href="#反思总结" class="headerlink" title="反思总结"></a>反思总结</h2><ul>
-<li>本博客站点设置了使用自定义样式文件, 即使用styles.styl文件, 不使用站点默认的swig文件(注意区分站点swig文件和主题swig文件).</li>
-<li>抄代码一时爽, debug火葬场.<ul>
-<li>刚建站的时候, 想要做一些基础的美化, 比如页面的滑动条的样式修改. 然后发现有人把自己做的所有的美化及其styl代码pose上来了, <strong>人家确实配了说明注释. 但是因为太多了, 我就敷衍的大概看了看,</strong> 挑了一些粘进了自己的styl文件里.</li>
-<li>然后又因为业务不熟练(CSS, html等一概不通), 不知道什么文件管哪部分样式的修改. 这个效果涉及hover代码我确实很早就查出来了. 但是就不知道在哪个文件里用的&gt;_&lt;|||.</li>
-</ul>
-</li>
-<li>基于此可以看到, <strong>对一切修改配置做留档记录是便于日后追溯的.</strong></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-        <category>Q&amp;A</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>record</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-问题1-hexo deploy 时每次要输入账号密码</title>
-    <url>/posts/hexo%20deploy%20needs%20account%20and%20password%20all%20the%20time/</url>
-    <content><![CDATA[<h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><p>hexo: 5.3.0<br>hexo-cli: 4.2.0<br>os: Windows_NT 10.0.19042 win32 x64<br>node: 12.20.0</p>
-<a id="more"></a>
-
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>本次修改站点配置文件_config.yml文件. 在_config.yml中搜索关键词完成相关任务.<br>注意区别<strong>主题配置文件</strong>与<strong>站点配置文件</strong>.</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>搜索<code>站点配置文件_config.yml</code>中的repository项<br>repository: 应填写<code>git@github.com:username/username.github.io.git</code>. (以保证使用SSH协议)</p>
-<p>例如:</p>
-<blockquote>
-<p>deploy:<br>&emsp;type: git<br>&emsp;repository: <code>git@github.com:Eyxxxxx/Eyxxxxx.github.io.git</code><br>&emsp;branch: master</p>
-</blockquote>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ul>
-<li><code>repository</code> 不应写为 <code>https://github.com/Eyxxxxx/Eyxxxxx.github.io.git</code> ←这是用https协议的, 会需要每次输入账号密码.</li>
-<li>每一项的英文冒号后面皆有空格, 不应错删或者使用错误的符号.</li>
-<li><strong>若此处<code>deploy</code>更改完仍有问题, 注意检查是否成功部署GitHub的SSH配置</strong> <a href="https://blog.csdn.net/hustpzb/article/details/8230454">参考链接 - Git SSH Key 生成步骤</a></li>
-<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%87%AD%E8%AF%81%E5%AD%98%E5%82%A8">其他参考 - Git 工具 - 凭证存储</a></li>
-</ul>
-]]></content>
       <categories>
         <category>Hexo</category>
         <category>Q&amp;A</category>
@@ -317,61 +322,6 @@
       </tags>
   </entry>
   <entry>
-    <title>word-管理员已关闭最近文档列表</title>
-    <url>/posts/The%20administrator%20has%20closed%20the%20list%20of%20recent%20documents/</url>
-    <content><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><ol>
-<li><p><code>word - 打开 - 最近 - 文档/文件夹</code> 显示：<br><code>您的管理员已关闭最近文档列表。请选择一个浏览文档的位置。</code></p>
-</li>
-<li><p>右键<code>任务栏</code>中<code>word</code>的图标, <code>最近</code>文件一栏显示为空.</p>
-</li>
-</ol>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>(打开 windows 10 家庭版 的 组策略编辑器 -&gt;) 修改组策略 -&gt; 修改注册表</p>
-<a id="more"></a>
-
-<h3 id="1-打开-windows-10-家庭版-的-组策略编辑器"><a href="#1-打开-windows-10-家庭版-的-组策略编辑器" class="headerlink" title="1. 打开 windows 10 家庭版 的 组策略编辑器"></a>1. 打开 windows 10 家庭版 的 组策略编辑器</h3><p>注: win10家庭版一般默认是没有组策略的. 即, <code>cmd + R</code>输入<code>gpedit.msc</code>然后回车打不开任何东西.</p>
-<ul>
-<li>打开<code>记事本</code>, 输入:</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">pushd</span> <span class="string">&quot;%~dp0&quot;</span></span><br><span class="line"></span><br><span class="line">dir /b %systemroot%\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;gp.txt</span><br><span class="line"></span><br><span class="line">dir /b %systemroot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;gp.txt</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> /f %%i <span class="keyword">in</span> (<span class="string">&#x27;findstr /i . gp.txt 2^&gt;nul&#x27;</span>) <span class="keyword">do</span> dism /online /norestart /add-package:<span class="string">&quot;%systemroot%\servicing\Packages\%%i&quot;</span></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p><code>文件 -&gt; 另存为</code>, 在窗口中我们点击<code>保存类型</code>下拉按钮, 在弹出菜单中选择<code>所有文件</code>菜单项；文件名填写为<code>zucelue.bat</code>(此处的bat后缀不可更改). 最后点击确定保存.</p>
-</li>
-<li><p>找到刚刚生成的zucelue.bat文件, 然后右键点击该文件, 在弹出菜单中选择<code>以管理员身份运行</code>菜单项.</p>
-</li>
-<li><p><code>cmd + R</code>输入<code>gpedit.msc</code>并回车即可打开本地组策略编辑器.</p>
-</li>
-</ul>
-<h3 id="2-修改组策略"><a href="#2-修改组策略" class="headerlink" title="2. 修改组策略"></a>2. 修改组策略</h3><p>找到<strong>用户配置</strong>—管理模板—“开始”菜单和任务栏.</p>
-<ul>
-<li>在右侧找到<code>关闭用户跟踪</code>, 改成已禁用-确定-关闭.</li>
-<li>在右侧找到<code>不保留最近打开的文档历史</code>, 改成已禁用-确定-关闭.</li>
-<li>在右侧找到<code>从开始菜单中删除最近的项目菜单</code>, 改成已禁用-确定-关闭.</li>
-</ul>
-<h3 id="3-修改注册表-register"><a href="#3-修改注册表-register" class="headerlink" title="3. 修改注册表(register)"></a>3. 修改注册表(register)</h3><p>检查<br>   <code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</code>和<code>HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</code>两处的DWORD值<strong>NoRecentDocsHistory</strong>, 双击点开, 将关键字从1改为0. </p>
-<h2 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h2><ol>
-<li><p>当windows的一些功能被修改, 或者一些设置找不到了(例如配置电源计划时, 以前的许多设置选项不见了), <strong>通常都要考虑改注册表</strong>以让相关选项出现或者直接达到想要的设置效果. 所以问题转化为查找如何修改注册表, 例如新建一个怎样的键值或者修改哪个路径下的哪一项</p>
-</li>
-<li><p>检索结果与目标问题的相关性:<br><code>英语 + 谷歌 &gt; 中文 + 谷歌 &gt; 中文 + 百度</code></p>
-</li>
-<li><p>使用中文操作系统时, 通过将相关报错信息用百度翻译等工具翻译成英文可获得大致的英文关键字. 具体关键字还可根据相关搜索等其它反馈进行微调.</p>
-</li>
-</ol>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
-<li><a href="http://www.xitongcheng.com/jiaocheng/win10_article_61410.html">win10家庭版如何打开组策略编辑器_win10家庭版找不到gpeditmsc的解决方法－系统城</a></li>
-<li><a href="https://blog.csdn.net/weixin_43460413/article/details/110659903">问题笔记：您的管理员已关闭最近文档列表_佚科的博客-CSDN博客</a></li>
-<li><a href="https://answers.microsoft.com/en-us/msoffice/forum/msoffice_install-mso_other-mso_365hp/your-administrator-has-turned-off-the-recent/dc28318b-d747-4ddf-84a7-916b7b0130d7">Your administrator has turned off the recent documents list. Pick a - Microsoft Community</a></li>
-<li><a href="https://community.spiceworks.com/topic/2212632-recent-documents-turned-off-by-administrator">Recent documents turned off by administrator - MS Office - Spiceworks</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>村口修电脑</category>
-      </categories>
-      <tags>
-        <tag>word</tag>
-        <tag>register</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python-安装mxnet库</title>
     <url>/posts/install%20mxnet%20in%20python/</url>
     <content><![CDATA[<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>win10 64位<br><strong>Python 3.8.2</strong> [MSC v.1916 64 bit (AMD64)] on win32<br>pip 20.2.4 (这个东西的版本在这里应该不重要, 有就行)</p>
@@ -506,6 +456,61 @@
       </categories>
       <tags>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>word-管理员已关闭最近文档列表</title>
+    <url>/posts/The%20administrator%20has%20closed%20the%20list%20of%20recent%20documents/</url>
+    <content><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><ol>
+<li><p><code>word - 打开 - 最近 - 文档/文件夹</code> 显示：<br><code>您的管理员已关闭最近文档列表。请选择一个浏览文档的位置。</code></p>
+</li>
+<li><p>右键<code>任务栏</code>中<code>word</code>的图标, <code>最近</code>文件一栏显示为空.</p>
+</li>
+</ol>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>(打开 windows 10 家庭版 的 组策略编辑器 -&gt;) 修改组策略 -&gt; 修改注册表</p>
+<a id="more"></a>
+
+<h3 id="1-打开-windows-10-家庭版-的-组策略编辑器"><a href="#1-打开-windows-10-家庭版-的-组策略编辑器" class="headerlink" title="1. 打开 windows 10 家庭版 的 组策略编辑器"></a>1. 打开 windows 10 家庭版 的 组策略编辑器</h3><p>注: win10家庭版一般默认是没有组策略的. 即, <code>cmd + R</code>输入<code>gpedit.msc</code>然后回车打不开任何东西.</p>
+<ul>
+<li>打开<code>记事本</code>, 输入:</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">pushd</span> <span class="string">&quot;%~dp0&quot;</span></span><br><span class="line"></span><br><span class="line">dir /b %systemroot%\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;gp.txt</span><br><span class="line"></span><br><span class="line">dir /b %systemroot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;gp.txt</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> /f %%i <span class="keyword">in</span> (<span class="string">&#x27;findstr /i . gp.txt 2^&gt;nul&#x27;</span>) <span class="keyword">do</span> dism /online /norestart /add-package:<span class="string">&quot;%systemroot%\servicing\Packages\%%i&quot;</span></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><code>文件 -&gt; 另存为</code>, 在窗口中我们点击<code>保存类型</code>下拉按钮, 在弹出菜单中选择<code>所有文件</code>菜单项；文件名填写为<code>zucelue.bat</code>(此处的bat后缀不可更改). 最后点击确定保存.</p>
+</li>
+<li><p>找到刚刚生成的zucelue.bat文件, 然后右键点击该文件, 在弹出菜单中选择<code>以管理员身份运行</code>菜单项.</p>
+</li>
+<li><p><code>cmd + R</code>输入<code>gpedit.msc</code>并回车即可打开本地组策略编辑器.</p>
+</li>
+</ul>
+<h3 id="2-修改组策略"><a href="#2-修改组策略" class="headerlink" title="2. 修改组策略"></a>2. 修改组策略</h3><p>找到<strong>用户配置</strong>—管理模板—“开始”菜单和任务栏.</p>
+<ul>
+<li>在右侧找到<code>关闭用户跟踪</code>, 改成已禁用-确定-关闭.</li>
+<li>在右侧找到<code>不保留最近打开的文档历史</code>, 改成已禁用-确定-关闭.</li>
+<li>在右侧找到<code>从开始菜单中删除最近的项目菜单</code>, 改成已禁用-确定-关闭.</li>
+</ul>
+<h3 id="3-修改注册表-register"><a href="#3-修改注册表-register" class="headerlink" title="3. 修改注册表(register)"></a>3. 修改注册表(register)</h3><p>检查<br>   <code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</code>和<code>HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</code>两处的DWORD值<strong>NoRecentDocsHistory</strong>, 双击点开, 将关键字从1改为0. </p>
+<h2 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h2><ol>
+<li><p>当windows的一些功能被修改, 或者一些设置找不到了(例如配置电源计划时, 以前的许多设置选项不见了), <strong>通常都要考虑改注册表</strong>以让相关选项出现或者直接达到想要的设置效果. 所以问题转化为查找如何修改注册表, 例如新建一个怎样的键值或者修改哪个路径下的哪一项</p>
+</li>
+<li><p>检索结果与目标问题的相关性:<br><code>英语 + 谷歌 &gt; 中文 + 谷歌 &gt; 中文 + 百度</code></p>
+</li>
+<li><p>使用中文操作系统时, 通过将相关报错信息用百度翻译等工具翻译成英文可获得大致的英文关键字. 具体关键字还可根据相关搜索等其它反馈进行微调.</p>
+</li>
+</ol>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
+<li><a href="http://www.xitongcheng.com/jiaocheng/win10_article_61410.html">win10家庭版如何打开组策略编辑器_win10家庭版找不到gpeditmsc的解决方法－系统城</a></li>
+<li><a href="https://blog.csdn.net/weixin_43460413/article/details/110659903">问题笔记：您的管理员已关闭最近文档列表_佚科的博客-CSDN博客</a></li>
+<li><a href="https://answers.microsoft.com/en-us/msoffice/forum/msoffice_install-mso_other-mso_365hp/your-administrator-has-turned-off-the-recent/dc28318b-d747-4ddf-84a7-916b7b0130d7">Your administrator has turned off the recent documents list. Pick a - Microsoft Community</a></li>
+<li><a href="https://community.spiceworks.com/topic/2212632-recent-documents-turned-off-by-administrator">Recent documents turned off by administrator - MS Office - Spiceworks</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>村口修电脑</category>
+      </categories>
+      <tags>
+        <tag>word</tag>
+        <tag>register</tag>
       </tags>
   </entry>
   <entry>
