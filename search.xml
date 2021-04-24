@@ -93,7 +93,7 @@
 <ol>
 <li>注释掉这段.</li>
 <li>在使用<code>hexo g &amp;&amp; hexo d</code> 部署之前, <strong>需先执行<code>hexo clean</code></strong></li>
-<li><strong>生效!</strong></li>
+<li><strong>重启浏览器, 生效!</strong>[重启浏览器, 或者打开新窗口(注意不是新标签页)会不使用之前的缓存, 就可以看到生效的结果啦]</li>
 </ol>
 <p>同理, 大家可依此给各模块定制自己喜欢的炫酷hover.</p>
 <p>PS: 该样式文件位于<code>.\Dig_a_Big_Hole\source\_data\styles.styl</code>, 即, 是在站点配置文件的source目录下而非主题配置文件的source目录下!<br>主题的swig文件在<code>.\Dig_a_Big_Hole\themes\next\layout\_partials</code>中.</p>
