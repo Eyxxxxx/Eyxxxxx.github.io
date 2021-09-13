@@ -6,7 +6,7 @@
   <link href="https://eyxxxxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://eyxxxxx.github.io/"/>
-  <updated>2021-04-24T08:53:50.799Z</updated>
+  <updated>2021-09-13T03:23:55.606Z</updated>
   <id>https://eyxxxxx.github.io/</id>
   
   <author>
@@ -17,251 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hexo-问题4-站点标题的hover修改</title>
-    <link href="https://eyxxxxx.github.io/posts/add%20or%20disable%20hover%20to%20site-title/"/>
-    <id>https://eyxxxxx.github.io/posts/add%20or%20disable%20hover%20to%20site-title/</id>
-    <published>2021-04-24T07:42:48.761Z</published>
-    <updated>2021-04-24T08:53:50.799Z</updated>
+    <title>汇编语言-王爽</title>
+    <link href="https://eyxxxxx.github.io/posts/masm/"/>
+    <id>https://eyxxxxx.github.io/posts/masm/</id>
+    <published>2021-09-11T15:49:10.738Z</published>
+    <updated>2021-09-13T03:23:55.606Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot; title=&quot;环境说明&quot;&gt;&lt;/a&gt;环境说明&lt;/h2&gt;&lt;p&gt;hexo: 5.3.0&lt;br&gt;hexo-cli: 4.2.0&lt;br&gt;os: Windows_NT 10.0.19042 win32 x64&lt;br&gt;node: 14.16.1&lt;/p&gt;
-&lt;p&gt;使用VScode作为编辑器.&lt;/p&gt;
-&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;鼠标悬浮在站点标题处, 每个字之间会产生空格(现已删除该效果)&lt;/p&gt;</summary>
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
     
     
     
-    <category term="Hexo" scheme="https://eyxxxxx.github.io/categories/Hexo/"/>
+    <category term="自己玩儿" scheme="https://eyxxxxx.github.io/categories/%E8%87%AA%E5%B7%B1%E7%8E%A9%E5%84%BF/"/>
     
-    <category term="Q&amp;A" scheme="https://eyxxxxx.github.io/categories/Hexo/Q-A/"/>
     
+    <category term="assembly" scheme="https://eyxxxxx.github.io/tags/assembly/"/>
     
-    <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
-    
-    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-问题3-文章中引用本地图片的方法</title>
-    <link href="https://eyxxxxx.github.io/posts/quote%20local%20images%20in%20hexo%20articles/"/>
-    <id>https://eyxxxxx.github.io/posts/quote%20local%20images%20in%20hexo%20articles/</id>
-    <published>2021-03-25T06:47:02.571Z</published>
-    <updated>2021-03-25T08:19:44.240Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot; title=&quot;环境说明&quot;&gt;&lt;/a&gt;环境说明&lt;/h2&gt;&lt;p&gt;hexo: 5.3.0&lt;br&gt;hexo-cli: 4.2.0&lt;br&gt;os: Windows_NT 10.0.19042 win32 x64&lt;br&gt;node: 12.20.0&lt;/p&gt;
-&lt;p&gt;使用VScode作为编辑器.&lt;/p&gt;
-&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;以md语法撰写的文章中, 利用相对引用的写法引用图片的三种方法及其问题如下图所示.&lt;/p&gt;
-&lt;center&gt;
-    &lt;img style=&quot;border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);&quot; src=&quot;/posts/quote%20local%20images%20in%20hexo%20articles/1.png&quot;&gt;
-    &lt;div style=&quot;color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 2px;&quot;&gt;图一&lt;/div&gt;
-&lt;/center&gt;
-
-&lt;p&gt;本文配置第三种方法. 可以实现在markdown中正常预览文章中的图片, 同时发布在博客中文章中的图片正常显示. 主要是这个插件搞起来有点坑. 所以有了本文记录.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Hexo" scheme="https://eyxxxxx.github.io/categories/Hexo/"/>
-    
-    <category term="Q&amp;A" scheme="https://eyxxxxx.github.io/categories/Hexo/Q-A/"/>
-    
-    
-    <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
-    
-    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-问题2-看板娘(live2d)与不蒜子的访客统计冲突</title>
-    <link href="https://eyxxxxx.github.io/posts/live2d%20conflicts%20with%20busuanzi&#39;%20visitor%20statistics/"/>
-    <id>https://eyxxxxx.github.io/posts/live2d%20conflicts%20with%20busuanzi&#39;%20visitor%20statistics/</id>
-    <published>2021-03-25T06:19:15.529Z</published>
-    <updated>2021-03-25T08:11:19.951Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot; title=&quot;环境说明&quot;&gt;&lt;/a&gt;环境说明&lt;/h2&gt;&lt;p&gt;OS: Win10&lt;br&gt;Hexo theme： NexT&lt;br&gt;NexT: v7.8.0    &amp;emsp; (FYI: NexT 最新版为v8.0.0)&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Hexo" scheme="https://eyxxxxx.github.io/categories/Hexo/"/>
-    
-    <category term="Q&amp;A" scheme="https://eyxxxxx.github.io/categories/Hexo/Q-A/"/>
-    
-    
-    <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
-    
-    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python-安装mxnet库</title>
-    <link href="https://eyxxxxx.github.io/posts/install%20mxnet%20in%20python/"/>
-    <id>https://eyxxxxx.github.io/posts/install%20mxnet%20in%20python/</id>
-    <published>2021-03-23T15:24:38.839Z</published>
-    <updated>2021-03-25T13:11:32.752Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h2&gt;&lt;p&gt;win10 64位&lt;br&gt;&lt;strong&gt;Python 3.8.2&lt;/strong&gt; [MSC v.1916 64 bit (AMD64)] on win32&lt;br&gt;pip 20.2.4 (这个东西的版本在这里应该不重要, 有就行)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;注: mxnet有很多装法, 包括基于GPU的、基于CPU和GPU的等, 我应该是配了一个基于CPU的最简单的环境.&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;使用&lt;code&gt;pip install mxnet&lt;/code&gt;无法成功安装mxnet模块&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="村口修电脑" scheme="https://eyxxxxx.github.io/categories/%E6%9D%91%E5%8F%A3%E4%BF%AE%E7%94%B5%E8%84%91/"/>
-    
-    
-    <category term="python" scheme="https://eyxxxxx.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>考研-初试</title>
-    <link href="https://eyxxxxx.github.io/posts/Unified%20National%20Graduate%20Entrance%20Examination%201/"/>
-    <id>https://eyxxxxx.github.io/posts/Unified%20National%20Graduate%20Entrance%20Examination%201/</id>
-    <published>2021-03-04T05:59:45.671Z</published>
-    <updated>2021-03-24T06:58:43.856Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;strong&gt;免责声明: 若因本人的任何建议而导致最终发挥失常的本人概不负责.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;本贴只讲述本人复习期间实际做过的事情和从成绩结果出发的反思总结, &lt;strong&gt;总的回顾来看我这波复习操作比较迷&lt;/strong&gt;, 仅供感觉自己要来不及学且目标院校不是清北复交那么高不可攀的同学参考, 请结合自身情况按需采纳, &lt;strong&gt;非常建议配合其它经验贴食用.&lt;/strong&gt;  &lt;/p&gt;
-&lt;p&gt;篇幅较长, 建议电脑观看.&lt;/p&gt;
-&lt;h2 id=&quot;个人基础介绍&quot;&gt;&lt;a href=&quot;#个人基础介绍&quot; class=&quot;headerlink&quot; title=&quot;个人基础介绍&quot;&gt;&lt;/a&gt;个人基础介绍&lt;/h2&gt;&lt;p&gt;记性还可以, 心比较大. 企图通过每一遍多花点时间认真学来取得别人多学好几遍的效果.  (不学很多遍实际上是因为时间来不及)&lt;br&gt;101-政治: 因为高考需要在高中正经学过政治, 对政治的感觉比较好.&lt;br&gt;201-英语: 大学两年几乎不碰英语六级裸考590+.&lt;br&gt;301-数学: 基础非常不牢, 一碰地动山摇.  (高数稀烂, 第一轮整了四个月, 主要头两个月是暑假在家比较咸鱼=^=)&lt;br&gt;824-专业课: 考数据结构和计网, 学校里第一遍学的时候自我感觉掌握的还可以.  &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="反思总结" scheme="https://eyxxxxx.github.io/categories/%E5%8F%8D%E6%80%9D%E6%80%BB%E7%BB%93/"/>
-    
-    
-    <category term="经验贴" scheme="https://eyxxxxx.github.io/tags/%E7%BB%8F%E9%AA%8C%E8%B4%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>word-管理员已关闭最近文档列表</title>
-    <link href="https://eyxxxxx.github.io/posts/The%20administrator%20has%20closed%20the%20list%20of%20recent%20documents/"/>
-    <id>https://eyxxxxx.github.io/posts/The%20administrator%20has%20closed%20the%20list%20of%20recent%20documents/</id>
-    <published>2021-03-02T08:36:30.261Z</published>
-    <updated>2021-03-25T06:25:19.201Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;word - 打开 - 最近 - 文档/文件夹&lt;/code&gt; 显示：&lt;br&gt;&lt;code&gt;您的管理员已关闭最近文档列表。请选择一个浏览文档的位置。&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;右键&lt;code&gt;任务栏&lt;/code&gt;中&lt;code&gt;word&lt;/code&gt;的图标, &lt;code&gt;最近&lt;/code&gt;文件一栏显示为空.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;解决方案&quot;&gt;&lt;a href=&quot;#解决方案&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h2&gt;&lt;p&gt;(打开 windows 10 家庭版 的 组策略编辑器 -&amp;gt;) 修改组策略 -&amp;gt; 修改注册表&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="村口修电脑" scheme="https://eyxxxxx.github.io/categories/%E6%9D%91%E5%8F%A3%E4%BF%AE%E7%94%B5%E8%84%91/"/>
-    
-    
-    <category term="word" scheme="https://eyxxxxx.github.io/tags/word/"/>
-    
-    <category term="register" scheme="https://eyxxxxx.github.io/tags/register/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-问题1-hexo deploy 时每次要输入账号密码</title>
-    <link href="https://eyxxxxx.github.io/posts/hexo%20deploy%20needs%20account%20and%20password%20all%20the%20time/"/>
-    <id>https://eyxxxxx.github.io/posts/hexo%20deploy%20needs%20account%20and%20password%20all%20the%20time/</id>
-    <published>2021-01-25T03:15:34.286Z</published>
-    <updated>2021-03-25T08:14:19.814Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot; title=&quot;环境说明&quot;&gt;&lt;/a&gt;环境说明&lt;/h2&gt;&lt;p&gt;hexo: 5.3.0&lt;br&gt;hexo-cli: 4.2.0&lt;br&gt;os: Windows_NT 10.0.19042 win32 x64&lt;br&gt;node: 12.20.0&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Hexo" scheme="https://eyxxxxx.github.io/categories/Hexo/"/>
-    
-    <category term="Q&amp;A" scheme="https://eyxxxxx.github.io/categories/Hexo/Q-A/"/>
-    
-    
-    <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
-    
-    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-界面美化-1</title>
-    <link href="https://eyxxxxx.github.io/posts/hexo%20css1/"/>
-    <id>https://eyxxxxx.github.io/posts/hexo%20css1/</id>
-    <published>2021-01-25T02:53:33.698Z</published>
-    <updated>2021-04-24T08:27:45.673Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;介绍一些可有可无的博客美化(基础美化)&lt;/p&gt;
-&lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot; title=&quot;环境说明&quot;&gt;&lt;/a&gt;环境说明&lt;/h2&gt;&lt;p&gt;OS: Win10&lt;br&gt;Hexo theme： NexT&lt;br&gt;NexT: v7.8.0    &amp;emsp; (FYI: NexT 最新版为v8.0.0)&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Hexo" scheme="https://eyxxxxx.github.io/categories/Hexo/"/>
-    
-    <category term="基于NexT主题的环境配置" scheme="https://eyxxxxx.github.io/categories/Hexo/%E5%9F%BA%E4%BA%8ENexT%E4%B8%BB%E9%A2%98%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    
-    
-    <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
-    
-    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-功能添加-1</title>
-    <link href="https://eyxxxxx.github.io/posts/hexo%20functions1/"/>
-    <id>https://eyxxxxx.github.io/posts/hexo%20functions1/</id>
-    <published>2021-01-21T16:57:21.671Z</published>
-    <updated>2021-03-06T16:56:27.150Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;介绍一些博客基础功能的配置&lt;/p&gt;
-&lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot; title=&quot;环境说明&quot;&gt;&lt;/a&gt;环境说明&lt;/h2&gt;&lt;p&gt;OS: Win10&lt;br&gt;Hexo theme： NexT&lt;br&gt;NexT: v7.8.0    &amp;emsp; (FYI: NexT 最新版为v8.0.0)&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Hexo" scheme="https://eyxxxxx.github.io/categories/Hexo/"/>
-    
-    <category term="基于NexT主题的环境配置" scheme="https://eyxxxxx.github.io/categories/Hexo/%E5%9F%BA%E4%BA%8ENexT%E4%B8%BB%E9%A2%98%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    
-    
-    <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
-    
-    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://eyxxxxx.github.io/posts/Hello-world/"/>
-    <id>https://eyxxxxx.github.io/posts/Hello-world/</id>
-    <published>2021-01-17T08:42:30.774Z</published>
-    <updated>2021-03-07T13:44:44.036Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;How-to-create-a-blog-based-on-Hexo&quot;&gt;&lt;a href=&quot;#How-to-create-a-blog-based-on-Hexo&quot; class=&quot;headerlink&quot; title=&quot;How to create a blog based on Hexo?&quot;&gt;&lt;/a&gt;How to create a blog based on Hexo?&lt;/h2&gt;&lt;p&gt;A word tutorial or a video tutorial, choose the one that you like:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://ryanluoxu.github.io/2017/11/24/%E7%94%A8-Hexo-%E5%92%8C-GitHub-Pages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2&quot;&gt;用 Hexo 和 GitHub Pages 搭建博客&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=14018659341007098701&quot;&gt;手把手教你从 0 开始搭建自己的个人博客 | 无坑版视频教程 | hexo&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="Hexo" scheme="https://eyxxxxx.github.io/categories/Hexo/"/>
-    
-    
-    <category term="Hexo" scheme="https://eyxxxxx.github.io/tags/Hexo/"/>
-    
-    <category term="record" scheme="https://eyxxxxx.github.io/tags/record/"/>
+    <category term="dos" scheme="https://eyxxxxx.github.io/tags/dos/"/>
     
   </entry>
   
