@@ -6,7 +6,7 @@
   <link href="https://eyxxxxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://eyxxxxx.github.io/"/>
-  <updated>2021-09-13T03:32:09.303Z</updated>
+  <updated>2021-09-15T16:23:32.544Z</updated>
   <id>https://eyxxxxx.github.io/</id>
   
   <author>
@@ -17,14 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>汇编语言（第四版）-王爽</title>
-    <link href="https://eyxxxxx.github.io/posts/masm/"/>
-    <id>https://eyxxxxx.github.io/posts/masm/</id>
+    <title>笔记-补码的来龙去脉</title>
+    <link href="https://eyxxxxx.github.io/posts/about%20two&#39;s%20complement/"/>
+    <id>https://eyxxxxx.github.io/posts/about%20two&#39;s%20complement/</id>
+    <published>2021-09-15T04:58:47.697Z</published>
+    <updated>2021-09-15T16:23:32.544Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;缘起：&lt;br&gt;
+看王爽的《汇编语言》（第四版）9.2节关于jmp指令的介绍时，第180页涉及了&lt;strong&gt;以补码表示数为基础的运算&lt;/strong&gt;，又一次想起自己似乎从来没理解过补码这个东西。本文试图从数学中同余的角度来理解补码的来龙去脉。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="自己玩儿" scheme="https://eyxxxxx.github.io/categories/%E8%87%AA%E5%B7%B1%E7%8E%A9%E5%84%BF/"/>
+    
+    
+    <category term="Computer organization" scheme="https://eyxxxxx.github.io/tags/Computer-organization/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>汇编语言（第四版）-王爽 (题解)</title>
+    <link href="https://eyxxxxx.github.io/posts/masm-wangshuang-exercise/"/>
+    <id>https://eyxxxxx.github.io/posts/masm-wangshuang-exercise/</id>
     <published>2021-09-11T15:49:10.738Z</published>
-    <updated>2021-09-13T03:32:09.303Z</updated>
+    <updated>2021-09-15T16:23:24.498Z</updated>
     
     
-    <summary type="html">&lt;p&gt;本书中一些习题和代码题的记录&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;本书中部分习题\代码题记录&lt;/p&gt;</summary>
     
     
     
@@ -33,7 +53,7 @@
     
     <category term="assembly" scheme="https://eyxxxxx.github.io/tags/assembly/"/>
     
-    <category term="dos" scheme="https://eyxxxxx.github.io/tags/dos/"/>
+    <category term="DOS" scheme="https://eyxxxxx.github.io/tags/DOS/"/>
     
   </entry>
   
