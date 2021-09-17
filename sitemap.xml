@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://eyxxxxx.github.io/posts/about%20two's%20complement/</loc>
+    <loc>https://eyxxxxx.github.io/posts/masm-wangshuang-exercise/</loc>
     
-    <lastmod>2021-09-16</lastmod>
+    <lastmod>2021-09-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://eyxxxxx.github.io/posts/masm-wangshuang-exercise/</loc>
+    <loc>https://eyxxxxx.github.io/posts/about%20two's%20complement/</loc>
     
-    <lastmod>2021-09-15</lastmod>
+    <lastmod>2021-09-16</lastmod>
     
   </url>
   
@@ -39,7 +39,7 @@
 
   <url>
     <loc>https://eyxxxxx.github.io/</loc>
-    <lastmod>2021-09-16</lastmod>
+    <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -47,21 +47,21 @@
   
   <url>
     <loc>https://eyxxxxx.github.io/tags/assembly/</loc>
-    <lastmod>2021-09-16</lastmod>
+    <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://eyxxxxx.github.io/tags/Computer-organization/</loc>
-    <lastmod>2021-09-16</lastmod>
+    <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://eyxxxxx.github.io/tags/DOS/</loc>
-    <lastmod>2021-09-16</lastmod>
+    <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -70,7 +70,7 @@
   
   <url>
     <loc>https://eyxxxxx.github.io/categories/%E8%87%AA%E5%B7%B1%E7%8E%A9%E5%84%BF/</loc>
-    <lastmod>2021-09-16</lastmod>
+    <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
