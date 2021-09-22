@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+
+
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"eyxxxxx.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="本书十一至十七章的部分习题\代码题记录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="汇编语言（第四版）-王爽 (题解)-2">
+<meta property="og:url" content="https://eyxxxxx.github.io/posts/masm-wangshuang-exercise-2/index.html">
+<meta property="og:site_name" content="Dig a Big Hole">
+<meta property="og:description" content="本书十一至十七章的部分习题\代码题记录">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://eyxxxxx.github.io/posts/masm-wangshuang-exercise-2/实验11.png">
+<meta property="og:image" content="https://eyxxxxx.github.io/posts/masm-wangshuang-exercise-2/CH12_默认栈段段地址和自定义栈段段地址.png">
+<meta property="og:image" content="https://eyxxxxx.github.io/posts/masm-wangshuang-exercise-2/检测点10.5.png">
+<meta property="og:image" content="https://eyxxxxx.github.io/posts/masm-wangshuang-exercise-2/实验12-图一.png">
+<meta property="og:image" content="https://eyxxxxx.github.io/posts/masm-wangshuang-exercise-2/实验12-图二.png">
+<meta property="article:published_time" content="2021-09-22T03:11:14.620Z">
+<meta property="article:modified_time" content="2021-09-22T03:23:53.836Z">
+<meta property="article:author" content="yx">
+<meta property="article:tag" content="assembly">
+<meta property="article:tag" content="DOS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://eyxxxxx.github.io/posts/masm-wangshuang-exercise-2/实验11.png">
+
+<link rel="canonical" href="https://eyxxxxx.github.io/posts/masm-wangshuang-exercise-2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>汇编语言（第四版）-王爽 (题解)-2 | Dig a Big Hole</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="Dig a Big Hole" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Dig a Big Hole</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Input/Output</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">3</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">1</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">5</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://eyxxxxx.github.io/posts/masm-wangshuang-exercise-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="yx">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dig a Big Hole">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          汇编语言（第四版）-王爽 (题解)-2
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-09-22 11:11:14 / 修改时间：11:23:53" itemprop="dateCreated datePublished" datetime="2021-09-22T11:11:14+08:00">2021-09-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%87%AA%E5%B7%B1%E7%8E%A9%E5%84%BF/" itemprop="url" rel="index"><span itemprop="name">自己玩儿</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/masm-wangshuang-exercise-2/" class="post-meta-item leancloud_visitors" data-flag-title="汇编语言（第四版）-王爽 (题解)-2" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本书十一至十七章的部分习题\代码题记录</p>
+<a id="more"></a>
+<h2 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h2>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Mayfly-nymph/p/12046088.html">《汇编语言》（王爽）课后答案 - Hk_Mayfly - 博客园</a></p>
+<h2 id="注"><a class="markdownIt-Anchor" href="#注"></a> 注</h2>
+<p>实验代码如果用notepad++等记事本写的，<strong>应当将文件的编码格式保存为utf-8，其它编码格式保存的文件会在编译的时候报莫名其妙的错</strong></p>
+<h2 id="ch11"><a class="markdownIt-Anchor" href="#ch11"></a> CH11</h2>
+<h3 id="实验11"><a class="markdownIt-Anchor" href="#实验11"></a> 实验11</h3>
+<ul>
+<li>把ascii码值大于等于97且小于等于122的减去32即可
+<ul>
+<li>不明白的可以参考p229 检测点11.3的第(1)题</li>
+</ul>
+</li>
+<li>可以用之前写的show_str子程序作输出——所以代码变得有点长</li>
+</ul>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">assume</span> <span class="built_in">cs</span>:code </span><br><span class="line"></span><br><span class="line">data <span class="meta">segment</span> </span><br><span class="line"> <span class="built_in">db</span> <span class="string">&quot;Beginner&#x27;s All-purpose Symbolic Instruction Code.&quot;</span>,<span class="number">0</span></span><br><span class="line">data ends</span><br><span class="line"></span><br><span class="line">stack <span class="meta">segment</span></span><br><span class="line"> <span class="built_in">dd</span> <span class="number">4</span> dup(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">stack ends</span><br><span class="line"></span><br><span class="line">code <span class="meta">segment</span></span><br><span class="line"><span class="symbol">begin:</span></span><br><span class="line"> </span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,stack</span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ss</span>,<span class="built_in">ax</span></span><br><span class="line"> </span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,data</span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ds</span>,<span class="built_in">ax</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">si</span>,<span class="number">0</span></span><br><span class="line"> <span class="keyword">call</span> letterc</span><br><span class="line"> </span><br><span class="line"> <span class="keyword">mov</span> <span class="number">dh</span>,<span class="number">10</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">dl</span>,<span class="number">15</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">cl</span>,<span class="number">71h</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">si</span>,<span class="number">0</span></span><br><span class="line"> <span class="keyword">call</span> show_str</span><br><span class="line"></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">4c00h</span></span><br><span class="line"><span class="keyword">int</span> <span class="number">21h</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">;name:   letterc</span></span><br><span class="line"><span class="comment">;function: 将以0结尾的字符串中的小写字母转变成大写字母</span></span><br><span class="line"><span class="comment">;parameter: ds:si指向字符串首地址</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">letterc:</span></span><br><span class="line"> <span class="keyword">push</span> <span class="built_in">si</span></span><br><span class="line"> <span class="keyword">push</span> <span class="built_in">ax</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">0</span></span><br><span class="line"><span class="symbol">  s:</span></span><br><span class="line">  <span class="keyword">mov</span> <span class="built_in">al</span>,[<span class="built_in">si</span>]</span><br><span class="line">  <span class="keyword">cmp</span> <span class="built_in">ax</span>,<span class="number">0</span></span><br><span class="line">  <span class="keyword">je</span> ok_letterc</span><br><span class="line">   <span class="keyword">cmp</span> <span class="built_in">al</span>,<span class="number">97</span></span><br><span class="line">   <span class="keyword">jb</span> s0</span><br><span class="line">   <span class="keyword">cmp</span> <span class="built_in">al</span>,<span class="number">122</span></span><br><span class="line">   <span class="keyword">ja</span> s0</span><br><span class="line">   <span class="keyword">and</span> <span class="built_in">al</span>,<span class="number">11011111B</span> <span class="comment">;将小写转换成大写</span></span><br><span class="line">   <span class="keyword">mov</span> [<span class="built_in">si</span>],<span class="built_in">al</span></span><br><span class="line"><span class="symbol">  s0:</span></span><br><span class="line">  <span class="keyword">inc</span> <span class="built_in">si</span></span><br><span class="line">  <span class="keyword">jmp</span> s</span><br><span class="line"></span><br><span class="line"><span class="symbol">ok_letterc:</span></span><br><span class="line"> <span class="keyword">pop</span> <span class="built_in">ax</span></span><br><span class="line"> <span class="keyword">pop</span> <span class="built_in">si</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">ret</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;名称: show_str</span></span><br><span class="line"><span class="comment">;功能：在指定的位置，用指定的颜色，显示一个用0结束的字符串</span></span><br><span class="line"><span class="comment">;参数： (dh)=行号(取值范围0~24), </span></span><br><span class="line"><span class="comment">;  (dl)=列号(取值范围0~79)</span></span><br><span class="line"><span class="comment">;  (cl)=颜色, </span></span><br><span class="line"><span class="comment">;  ds:si 指向字符串的首地址</span></span><br><span class="line"><span class="comment">;返回：无</span></span><br><span class="line"><span class="comment">;test_data: 在屏幕8行3列处，用绿色显示data段中的字符串</span></span><br><span class="line"><span class="symbol">show_str:</span></span><br><span class="line"><span class="comment">;保存现场</span></span><br><span class="line"><span class="keyword">push</span> <span class="built_in">ax</span></span><br><span class="line"><span class="keyword">push</span> <span class="built_in">bx</span></span><br><span class="line"><span class="keyword">push</span> <span class="built_in">cx</span></span><br><span class="line"><span class="keyword">push</span> <span class="built_in">dx</span></span><br><span class="line"><span class="keyword">push</span> <span class="built_in">si</span></span><br><span class="line"><span class="keyword">push</span> <span class="built_in">di</span></span><br><span class="line"><span class="keyword">push</span> <span class="built_in">es</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">;先计算行偏移地址，再加到页首起始地址上，存放在es段寄存器中</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">0</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">al</span>,<span class="number">0ah</span></span><br><span class="line"> <span class="keyword">mul</span> <span class="number">dh</span></span><br><span class="line"> <span class="keyword">add</span> <span class="built_in">ax</span>,<span class="number">0b800h</span> <span class="comment">;0b800h是显存的起始地址</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">es</span>,<span class="built_in">ax</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">;计算列偏移地址。列偏移起始地址=列号*2-2</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">0</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">al</span>,<span class="built_in">dl</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">bl</span>,<span class="number">2</span></span><br><span class="line"> <span class="keyword">mul</span> <span class="built_in">bl</span> </span><br><span class="line"> <span class="keyword">sub</span> <span class="built_in">ax</span>,<span class="number">2</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">di</span>,<span class="built_in">ax</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">;暂存颜色属性</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">al</span>,<span class="built_in">cl</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">;开始打印数据前的部分置为空</span></span><br><span class="line"> <span class="keyword">push</span> <span class="built_in">dx</span></span><br><span class="line">  <span class="comment">;计算需置空的字符个数</span></span><br><span class="line">  <span class="keyword">mov</span> <span class="built_in">cl</span>,<span class="built_in">dl</span></span><br><span class="line">  <span class="keyword">mov</span> <span class="number">ch</span>,<span class="number">0</span></span><br><span class="line">  <span class="comment">;计算起始列起始地址</span></span><br><span class="line">  <span class="keyword">mov</span> <span class="built_in">dx</span>,<span class="number">0</span></span><br><span class="line">   <span class="keyword">call</span> set_space</span><br><span class="line"> <span class="keyword">pop</span> <span class="built_in">dx</span></span><br><span class="line"> <span class="comment">;按要求搬运内容至显存指定位置，以指定格式输出</span></span><br><span class="line"><span class="symbol"> prt:</span></span><br><span class="line">  <span class="keyword">mov</span> <span class="number">ch</span>,<span class="number">0</span></span><br><span class="line">  <span class="keyword">mov</span> <span class="built_in">cl</span>,<span class="built_in">ds</span>:[<span class="built_in">si</span>]</span><br><span class="line">  <span class="keyword">jcxz</span> after  <span class="comment">;若cx==0，子程序运行结束</span></span><br><span class="line">  <span class="keyword">mov</span> <span class="built_in">es</span>:[<span class="built_in">di</span>+<span class="number">1</span>],<span class="built_in">al</span> <span class="comment">;搬运属性</span></span><br><span class="line">  <span class="keyword">mov</span> <span class="built_in">es</span>:[<span class="built_in">di</span>],<span class="built_in">cl</span>  <span class="comment">;搬运字符</span></span><br><span class="line">  <span class="keyword">add</span> <span class="built_in">di</span>,<span class="number">2</span></span><br><span class="line">  <span class="comment">;搬运下一个字符</span></span><br><span class="line">  <span class="keyword">inc</span> <span class="built_in">si</span></span><br><span class="line">  </span><br><span class="line"> <span class="keyword">jmp</span> short prt</span><br><span class="line"> </span><br><span class="line"> <span class="comment">;结束打印数据后的部分置为空</span></span><br><span class="line"><span class="symbol"> after:</span></span><br><span class="line">  <span class="comment">;计算需置空的字符个数</span></span><br><span class="line">  <span class="keyword">mov</span> <span class="built_in">cx</span>,<span class="number">0</span></span><br><span class="line">  <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="built_in">di</span></span><br><span class="line">  <span class="keyword">mov</span> <span class="built_in">cl</span>,<span class="number">2</span></span><br><span class="line">  <span class="keyword">div</span> <span class="built_in">cl</span></span><br><span class="line">  <span class="keyword">mov</span> <span class="built_in">cl</span>,<span class="number">80</span></span><br><span class="line">  <span class="keyword">sub</span> <span class="built_in">cl</span>,<span class="built_in">al</span></span><br><span class="line">  <span class="comment">;计算起始列起始地址</span></span><br><span class="line">  <span class="keyword">mov</span> <span class="built_in">dx</span>,<span class="built_in">di</span></span><br><span class="line">  <span class="keyword">call</span> set_space</span><br><span class="line">  </span><br><span class="line"><span class="comment">;恢复现场</span></span><br><span class="line"><span class="keyword">pop</span> <span class="built_in">es</span></span><br><span class="line"><span class="keyword">pop</span> <span class="built_in">di</span></span><br><span class="line"><span class="keyword">pop</span> <span class="built_in">si</span></span><br><span class="line"><span class="keyword">pop</span> <span class="built_in">dx</span></span><br><span class="line"><span class="keyword">pop</span> <span class="built_in">cx</span></span><br><span class="line"><span class="keyword">pop</span> <span class="built_in">bx</span></span><br><span class="line"><span class="keyword">pop</span> <span class="built_in">ax</span></span><br><span class="line"><span class="keyword">ret</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">;name:set_space</span></span><br><span class="line"><span class="comment">;function: 使得指定区间的所有列显示为空</span></span><br><span class="line"><span class="comment">;parameter: (dl)=起始列起始地址(取值范围1~80)</span></span><br><span class="line"><span class="comment">;   (cx)=区间中字符个数(取值范围0~80)</span></span><br><span class="line"><span class="comment">;return: null</span></span><br><span class="line"><span class="symbol">set_space:</span></span><br><span class="line"><span class="keyword">jcxz</span> end_set_space</span><br><span class="line"><span class="keyword">push</span> <span class="built_in">ax</span></span><br><span class="line"><span class="keyword">push</span> <span class="built_in">bx</span></span><br><span class="line"><span class="keyword">push</span> <span class="built_in">cx</span></span><br><span class="line">  <span class="comment">;低8位存字符ascii码置零，高8位存属性置零</span></span><br><span class="line">  <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">0</span> </span><br><span class="line">  <span class="keyword">mov</span> <span class="number">bh</span>,<span class="number">0</span></span><br><span class="line">  <span class="keyword">mov</span> <span class="built_in">bl</span>,<span class="built_in">dl</span></span><br><span class="line"><span class="symbol"> set_:</span></span><br><span class="line">  <span class="keyword">mov</span> <span class="built_in">es</span>:[<span class="built_in">bx</span>],<span class="built_in">ax</span></span><br><span class="line">  <span class="keyword">add</span> <span class="built_in">bx</span>,<span class="number">2</span></span><br><span class="line"> <span class="keyword">loop</span> set_</span><br><span class="line"> </span><br><span class="line"><span class="symbol">end_set_space:</span></span><br><span class="line"><span class="keyword">pop</span> <span class="built_in">cx</span></span><br><span class="line"><span class="keyword">pop</span> <span class="built_in">bx</span></span><br><span class="line"><span class="keyword">pop</span> <span class="built_in">ax</span></span><br><span class="line"><span class="keyword">ret</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">code ends</span><br><span class="line">end begin</span><br></pre></td></tr></table></figure>
+<p>运行结果如下</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="/posts/masm-wangshuang-exercise-2/实验11.png">
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">实验11</div>
+</center>
+<h2 id="ch12"><a class="markdownIt-Anchor" href="#ch12"></a> CH12</h2>
+<h3 id="ch1212-关于栈的思考"><a class="markdownIt-Anchor" href="#ch1212-关于栈的思考"></a> CH12.12 关于栈的思考</h3>
+<p>该小节解释了<code>Debug程序</code>利用单步中断来实现<code>T命令</code>时和栈相关部分的具体实现(或者说具体操作)。简单来说，Debug程序执行T命令过程中，<strong>利用栈来保存现场并恢复现场</strong>——就这一句本身以及与不同指令结合时可以引发诸多问题。</p>
+<p>本书到此为止我觉得与该小节相关的部分列举如下</p>
+<ul>
+<li>实验2.(2) p74</li>
+<li>实验5.(5)和5.(6) p136</li>
+<li>检测点10.5(1) p195</li>
+</ul>
+<h4 id="默认栈段的段地址和自定义栈段的段地址"><a class="markdownIt-Anchor" href="#默认栈段的段地址和自定义栈段的段地址"></a> 默认栈段的段地址和自定义栈段的段地址</h4>
+<p>通过实验发现，如果用户没有在源程序中自己定义一个栈段，那么会默认利用<code>可执行文件</code>开头<code>描述信息</code>256个字节中的最后16个字节作为栈段。</p>
+<p>测试代码如下</p>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">assume</span> <span class="built_in">cs</span>:code</span><br><span class="line"></span><br><span class="line">data <span class="meta">segment</span></span><br><span class="line"> <span class="built_in">db</span> <span class="string">&#x27;12345678&#x27;</span></span><br><span class="line">data ends</span><br><span class="line"></span><br><span class="line">stack <span class="meta">segment</span></span><br><span class="line"> <span class="built_in">dw</span> <span class="number">8</span> dup(<span class="number">0</span>)</span><br><span class="line">stack ends</span><br><span class="line"></span><br><span class="line">code <span class="meta">segment</span></span><br><span class="line"><span class="symbol">start:</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,stack</span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ss</span>,<span class="built_in">ax</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">sp</span>,<span class="number">16</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,data</span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ds</span>,<span class="built_in">ax</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">0</span></span><br><span class="line"> </span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">4c00h</span></span><br><span class="line"> <span class="keyword">int</span> <span class="number">21h</span></span><br><span class="line"></span><br><span class="line">code ends</span><br><span class="line">end start</span><br></pre></td></tr></table></figure>
+<p>结果如下图所示，在程序执行第一条指令前<code>DS</code>指向可执行文件描述信息的开头，值为<code>075A</code>，描述信息占256字节，所以程序开始的段地址为<code>076A</code>（这里的程序开始不是指第一条指令所在的位置。）可以看到此时<code>SS=0769</code>，说明默认利用<code>可执行文件</code>开头<code>描述信息</code>256个字节中的最后16个字节作为栈段。</p>
+<p>当我们将自己设置的栈段的段地址赋予<code>ss</code>后，看到<code>ss</code>的值为<code>076B</code>，位于数据段之后，程序入口地址之前。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="/posts/masm-wangshuang-exercise-2/CH12_默认栈段段地址和自定义栈段段地址.png">
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">CH12_默认栈段段地址和自定义栈段段地址</div>
+</center>
+<p>注：关于 可执行文件的描述信息 详见P126</p>
+<h4 id="关于-实验22-p74"><a class="markdownIt-Anchor" href="#关于-实验22-p74"></a> 关于 实验2.(2) p74</h4>
+<p>需注意，看到栈中内容发生改变是在debug模式下看到的，这改变确实与debug模式有关。p250页解释了入栈的内容及这些内容入栈的原因。</p>
+<p>此外，中断过程确实首先需要入栈标志寄存器，但是这里栈底的字的值无从得知具体意义——可以证明不是标志寄存器的值且与之无关，应当和debug程序的具体实现有关，需要看源代码，这里不做深究。</p>
+<h4 id="实验55和56-p136"><a class="markdownIt-Anchor" href="#实验55和56-p136"></a> 实验5.(5)和5.(6) p136</h4>
+<p>写这俩实验的时候，最开始我总妄想把源数据的段地址存放至<code>ss</code>寄存器，或者把目标数据段同时定义为一个栈段——详细分析见CH6实验5，但这样做是不对的！而且由于当时不会在屏幕上输出结果，只会通过调试及单步调试看运行结果，就导致结果总是和预期出现很多偏差——栈中总是写入了莫名其妙的数据——当然现在知道了这些是debug相关的数据。</p>
+<h4 id="检测点1051-p195"><a class="markdownIt-Anchor" href="#检测点1051-p195"></a> 检测点10.5(1) p195</h4>
+<p><a target="_blank" rel="noopener" href="https://fishc.com.cn/forum.php?mod=viewthread&amp;tid=100283&amp;page=1#pid3090276">参考资料</a></p>
+<p>以下考虑实际实行结果，而非debug中单步跟踪的结果<br>
+<strong>总结</strong>：
+这个题目实际上执行了两次call指令
+第一次，call跳转到cs:00处，因为第一次时ds:[0eh]单元里是初始化时候的0，先获取(ds:[0eh])=0，再执行call指令，即把call指令后一条指令的ip入栈。
+第二次，call跳转到上次入栈的指令地址(即call指令后第一条指令的地址)第一条inc ax处，继续向下执行。</p>
+<p><strong>在debug模式下运行以下代码，但不使用单步调试，</strong> 直接跳转到标号ending结束处，观察寄存器dx和ax的值即可证明call指令执行了两次。</p>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">assume</span> <span class="built_in">cs</span>:code</span><br><span class="line"></span><br><span class="line">stack <span class="meta">segment</span></span><br><span class="line"> <span class="built_in">dw</span> <span class="number">8</span> dup(<span class="number">0</span>)</span><br><span class="line">stack ends</span><br><span class="line"></span><br><span class="line">code <span class="meta">segment</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">dx</span>,<span class="number">21</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">start:</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,stack</span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ss</span>,<span class="built_in">ax</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">sp</span>,<span class="number">16</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ds</span>,<span class="built_in">ax</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">0</span></span><br><span class="line"> <span class="keyword">call</span> <span class="built_in">word</span> <span class="built_in">ptr</span> <span class="built_in">ds</span>:[<span class="number">0eh</span>]</span><br><span class="line"> <span class="keyword">inc</span> <span class="built_in">ax</span></span><br><span class="line"> <span class="keyword">inc</span> <span class="built_in">ax</span></span><br><span class="line"> <span class="keyword">inc</span> <span class="built_in">ax</span></span><br><span class="line"> </span><br><span class="line"><span class="symbol"> ending:</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">4c00h</span></span><br><span class="line"> <span class="keyword">int</span> <span class="number">21h</span></span><br><span class="line"></span><br><span class="line">code ends</span><br><span class="line">end start</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>运行结束后<code>(DX)=0015H</code>说明执行了入口地址<code>start</code>之前的指令 <code>mov dx,21</code>，证明第一次跳转至cs:00处。第二次跳转的情况是显然的。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="/posts/masm-wangshuang-exercise-2/检测点10.5.png">
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">检测点10.5</div>
+</center>
+<p>补充说明：(摘自本节前述参考资料)</p>
+<blockquote>
+<p>（一）在这个题目里，压入栈里的东东到底是多少？我不知道，你不知道，王爽也不知道。但我们知道，压入的是指令inc ax所在处的偏移地址。<br>
+（二）但是这个执行就千万要注意了，绝不是那么想当然。</p>
+<p><strong>想当然的想法—错误的想法：</strong><br>
+（1）读取指令CALL WORD PTR DS:[0EH]<br>
+（2）此时IP指向下一条指令。<br>
+（3）将IP的值压入栈，压入后SP指向0EH单元，其中的值IP为下一条指令的偏移地址。<br>
+（4）读取DS:[0EH]的值，将其给IP后，程序跳转到CS:IP处执行。因为IP就是下一条指令的偏移，所以程序直接跳转到INC AX处执行。</p>
+<p>（三）<strong>正确的思路-真正正确的执行过程，这就是为什么题目里会有圆括号里那些文字的原因。</strong><br>
+（1）读取指令CALL WORD PTR DS:[0EH]<br>
+（2）CPU知道这是一个跳转指令，所以它把要跳转的目标地址暂时放到一个临时的位置<br>
+（3）执行 push 返回地址—也就是下一条指令处偏移地址的操作<br>
+（4）把临时位置处的地址给IP，跳转到这个IP地址。</p>
+</blockquote>
+<p>具体成因和 Intel 指令手册中 Call 指令执行流程有关。<br>
+简单来说就是：</p>
+<blockquote>
+<p>跳转的目标位置在读call指令的时候就已经定了，而不是push之后定的。
+所谓用ds:[0eH]处的值代替IP，这时候用的是临时位置处的值，而这个值是push之前的值。<strong>其实也很好理解，CPU说：我TMD的指令都读取完了，怎么还轮得到你PUSH一下就把我读的给改了呢</strong></p>
+</blockquote>
+<h3 id="实验12"><a class="markdownIt-Anchor" href="#实验12"></a> 实验12</h3>
+<p>几个想当然的错误：</p>
+<ul>
+<li>
+<p>在<code>do0程序</code>中需要将该程序中的数据<code>divide error</code>搬运至显存，则首先需要用<code>ds:si</code>给出数据地址。此处的<code>di</code>必须显示的用<code>0202h</code>给出，而不能用<code>offset do0 + 2</code>（开头处的jmp short跳转指令占两字节），因为此处用<code>offset</code>求得的偏移是编译时计算的<code>do0</code>这个标号在整个do0安装程序中的相对于安装程序入口地址处的偏移，而不是相对于do0程序入口地址处的偏移。【这其实和课本p246程序12.2在数据存储上犯的错误是类似的。】</p>
+<ul>
+<li>此外，地址若是十六进制数值要记得加上h</li>
+</ul>
+</li>
+<li>
+<p>在<code>do0程序</code>中，从程序数据段向显存搬运字符串时应<strong>选择合适的寄存器</strong>！应选择8位寄存器！</p>
+<ul>
+<li>此处的循环计数器的值倒是可以用<code>offset do0_start - offset do0-2</code>求。因为两个<code>offset</code>相减计算的是两者间的距离，与其起始位置无关了。这样做可以增加程序的一般性——且不用数字符串中字符的个数。
+<ul>
+<li>但是注意，这要求知道第一条jmp指令的大小。<code>jmp short 标号</code>占两字节，但是<code>jmp 标号</code>占3字节，且第三字节为nop！细节处都是坑！</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>其它粗心错误</p>
+<ul>
+<li>安装程序结尾不要忘记写上 <code>mov ax,4c00h</code>和<code>int 21h</code>
+<ul>
+<li>注意<code>int</code>后面的中断号是<code>21h</code>，不要忘记<code>h</code></li>
+</ul>
+</li>
+<li><code>do0程序</code>，是先写<code>mov ax,4c00h</code>和<code>int 21h</code>，然后再写便于计算程序长度的<code>do0_end: nop</code></li>
+<li>地址计算上，各个操作的段地址是多少，应该从哪个(段)寄存器取值给哪个(段)寄存器赋值；**偏移地址是相对于哪个起点的偏移。**都要仔细。</li>
+</ul>
+</li>
+</ul>
+<p>注：下面代码中自带了一个除法溢出的运算，直接调用自定义0号中断处理程序输出<code>divide error</code>并退出。</p>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">;name: 0号中断处理程序 的 安装程序</span></span><br><span class="line"><span class="comment">;function: 安装do0程序，使得0号中断发生时，指向该处理程序</span></span><br><span class="line"><span class="comment">;parameter: null</span></span><br><span class="line"><span class="comment">;return: null</span></span><br><span class="line"></span><br><span class="line"><span class="meta">assume</span> <span class="built_in">cs</span>:code</span><br><span class="line">code <span class="meta">segment</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">start:</span></span><br><span class="line"> <span class="comment">;安装do0程序</span></span><br><span class="line"> <span class="comment">;ds:si指向源数据地址</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="built_in">cs</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ds</span>,<span class="built_in">ax</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">si</span>,offset do0</span><br><span class="line"> <span class="comment">;es:di指向数据目标存储地址</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">0</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">es</span>,<span class="built_in">ax</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">di</span>,<span class="number">200h</span></span><br><span class="line"> <span class="comment">;搬运数据</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">cx</span>,offset do0_end - offset do0</span><br><span class="line"> <span class="keyword">cld</span></span><br><span class="line"> <span class="keyword">rep</span> <span class="keyword">movsb</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">;设置中断向量表</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">0</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">es</span>,<span class="built_in">ax</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">word</span> <span class="built_in">ptr</span> <span class="built_in">es</span>:[<span class="number">0</span>*<span class="number">4</span>],<span class="number">200h</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">word</span> <span class="built_in">ptr</span> <span class="built_in">es</span>:[<span class="number">0</span>*<span class="number">4</span>+<span class="number">2</span>],<span class="number">0</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">;除法溢出计算，调用自定义0号中断处理程序</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">1000</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">bl</span>,<span class="number">1</span></span><br><span class="line"> <span class="keyword">div</span> <span class="built_in">bl</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">4c00h</span></span><br><span class="line"><span class="keyword">int</span> <span class="number">21h</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">;do0程序</span></span><br><span class="line"><span class="comment">;name: 0号中断处理程序 及其 安装程序</span></span><br><span class="line"><span class="comment">;function: 除法溢出发生时，在屏幕中间显示字符串&quot;divide error!&quot;,然后返回DOS</span></span><br><span class="line"><span class="comment">;parameter: null</span></span><br><span class="line"><span class="comment">;return: null</span></span><br><span class="line"><span class="symbol">do0:</span></span><br><span class="line"> <span class="keyword">jmp</span> short do0_start </span><br><span class="line"> <span class="built_in">db</span> <span class="string">&quot;divide error&quot;</span>,<span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">do0_start:</span></span><br><span class="line"><span class="comment">;ds:si指向源数据地址</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="built_in">cs</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ds</span>,<span class="built_in">ax</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">si</span>,<span class="number">202h</span><span class="comment">;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;es:di指向显存中的目标地址</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">0b800h</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">es</span>,<span class="built_in">ax</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">di</span>,<span class="number">12</span>*<span class="number">160</span>+<span class="number">32</span>*<span class="number">2</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">cx</span>,offset do0_start - offset do0-<span class="number">2</span></span><br><span class="line"><span class="symbol">move:</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">al</span>,[<span class="built_in">si</span>]</span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">es</span>:[<span class="built_in">di</span>],<span class="built_in">al</span></span><br><span class="line"> <span class="keyword">mov</span> <span class="built_in">byte</span> <span class="built_in">ptr</span> <span class="built_in">es</span>:[<span class="built_in">di</span>+<span class="number">1</span>],<span class="number">71h</span></span><br><span class="line"> <span class="keyword">inc</span> <span class="built_in">si</span></span><br><span class="line"> <span class="keyword">add</span> <span class="built_in">di</span>,<span class="number">2</span></span><br><span class="line"><span class="keyword">loop</span> move</span><br><span class="line"></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">4c00h</span></span><br><span class="line"><span class="keyword">int</span> <span class="number">21h</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">do0_end:</span></span><br><span class="line"> <span class="keyword">nop</span></span><br><span class="line"></span><br><span class="line">code ends</span><br><span class="line">end start</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="/posts/masm-wangshuang-exercise-2/实验12-图一.png">
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">实验12-图一</div>
+</center>
+<p>单独另写一个除法溢出的程序<strong>运行在已安装自定义0号中断处理程序的dos窗口下</strong>也可以看到有相同的报错提示。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="/posts/masm-wangshuang-exercise-2/实验12-图二.png">
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">实验12-图二</div>
+</center>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>Thanks for your reading!</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/alipay.jpg" alt="yx 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>yx
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://eyxxxxx.github.io/posts/masm-wangshuang-exercise-2/" title="汇编语言（第四版）-王爽 (题解)-2">https://eyxxxxx.github.io/posts/masm-wangshuang-exercise-2/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/assembly/" rel="tag"># assembly</a>
+              <a href="/tags/DOS/" rel="tag"># DOS</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/0/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">1.</span> <span class="nav-text"> 参考资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8"><span class="nav-number">2.</span> <span class="nav-text"> 注</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ch11"><span class="nav-number">3.</span> <span class="nav-text"> CH11</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C11"><span class="nav-number">3.1.</span> <span class="nav-text"> 实验11</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ch12"><span class="nav-number">4.</span> <span class="nav-text"> CH12</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ch1212-%E5%85%B3%E4%BA%8E%E6%A0%88%E7%9A%84%E6%80%9D%E8%80%83"><span class="nav-number">4.1.</span> <span class="nav-text"> CH12.12 关于栈的思考</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E6%A0%88%E6%AE%B5%E7%9A%84%E6%AE%B5%E5%9C%B0%E5%9D%80%E5%92%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%88%E6%AE%B5%E7%9A%84%E6%AE%B5%E5%9C%B0%E5%9D%80"><span class="nav-number">4.1.1.</span> <span class="nav-text"> 默认栈段的段地址和自定义栈段的段地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E-%E5%AE%9E%E9%AA%8C22-p74"><span class="nav-number">4.1.2.</span> <span class="nav-text"> 关于 实验2.(2) p74</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C55%E5%92%8C56-p136"><span class="nav-number">4.1.3.</span> <span class="nav-text"> 实验5.(5)和5.(6) p136</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E7%82%B91051-p195"><span class="nav-number">4.1.4.</span> <span class="nav-text"> 检测点10.5(1) p195</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C12"><span class="nav-number">4.2.</span> <span class="nav-text"> 实验12</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <a href="/about/">
+		<img class="site-author-image" itemprop="image" alt="yx"
+		  src="/images/avatar.jpg">
+	  <p class="site-author-name" itemprop="name">yx</p>
+    </a>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://liam.page/" title="https:&#x2F;&#x2F;liam.page&#x2F;" rel="noopener" target="_blank">Liam Huang</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yx</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+-->
+
+<!--修改的强力驱动部分代码-->
+  <div class="powered-by"><a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v5.3.0  | <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.8.0 
+  </div>
+
+<div id="days"></div>
+<script>
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("01/17/2021 16:28:21");
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    document.getElementById('days').innerHTML="已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+}
+function setzero(i) {
+    if (i<10) {
+        i="0" + i
+    };
+    return i;
+}
+show_date_time();
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <span><br></span> -->	
+<span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+</span>
+<span><!-- 关键词: 访问人数 -->&nbsp<span id="busuanzi_value_site_uv"></span>&nbsp<!-- 关键词: 人 --></span>
+    <span class="post-meta-divider">|</span>
+<span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+</span>
+    <span><!-- 关键词: 访问总量 -->&nbsp<span id="busuanzi_value_site_pv"></span>&nbsp<!-- 关键词: 次 --></span>
+
+
+        
+
+
+
+
+
+
+<script>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = decodeURI(visitors.id);
+      var title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              Counter('post', '/classes/Counter', { title, url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.error('Failed to create', error);
+                });
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            let target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    let { app_id, app_key, server_url } = {"enable":true,"app_id":"RQeK67Eplz04aMuO2n8QVJpY-gzGzoHsz","app_key":"i2q15jC56GgjnHMqCN8kKjhL","server_url":null,"security":false};
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    let api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":230,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
