@@ -6,7 +6,7 @@
   <link href="https://eyxxxxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://eyxxxxx.github.io/"/>
-  <updated>2021-09-22T03:23:53.836Z</updated>
+  <updated>2021-09-22T03:25:14.291Z</updated>
   <id>https://eyxxxxx.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://eyxxxxx.github.io/posts/masm-wangshuang-exercise-2/"/>
     <id>https://eyxxxxx.github.io/posts/masm-wangshuang-exercise-2/</id>
     <published>2021-09-22T03:11:14.620Z</published>
-    <updated>2021-09-22T03:23:53.836Z</updated>
+    <updated>2021-09-22T03:25:14.291Z</updated>
     
     
     <summary type="html">&lt;p&gt;本书十一至十七章的部分习题\代码题记录&lt;/p&gt;</summary>
@@ -42,7 +42,7 @@
     <link href="https://eyxxxxx.github.io/posts/0/"/>
     <id>https://eyxxxxx.github.io/posts/0/</id>
     <published>2021-09-21T13:09:03.252Z</published>
-    <updated>2021-09-21T13:10:55.781Z</updated>
+    <updated>2021-09-22T03:24:23.912Z</updated>
     
     
     <summary type="html">&lt;!doctype html&gt;
@@ -793,21 +793,6 @@ abbrlink: masm-wangshuang-exercise&lt;/li&gt;
     
     
     <category term="Computer organization" scheme="https://eyxxxxx.github.io/tags/Computer-organization/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>汇编语言（第四版）-王爽 (题解)</title>
-    <link href="https://eyxxxxx.github.io/posts/masm-wangshuang-exercise/"/>
-    <id>https://eyxxxxx.github.io/posts/masm-wangshuang-exercise/</id>
-    <published>2021-09-11T15:49:10.738Z</published>
-    <updated>2021-09-19T12:10:20.396Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;本书中部分习题\代码题记录&lt;/p&gt;</summary>
-    
-    
-    
     
   </entry>
   
