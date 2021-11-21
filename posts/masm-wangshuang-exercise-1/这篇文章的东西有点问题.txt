@@ -1,0 +1,48 @@
+这块内容写的有问题，是会有一个默认的栈段，但是不在描述信息中，在另外一个很遥远的地方
+#### 默认栈段的段地址和自定义栈段的段地址
+<!-- 通过实验发现，如果用户没有在源程序中自己定义一个栈段，那么会默认利用`可执行文件`开头`描述信息`256 个字节中的最后 16 个字节作为栈段。
+
+测试代码如下
+
+```x86asm
+assume cs:code
+
+data segment
+ db '12345678'
+data ends
+
+stack segment
+ dw 8 dup(0)
+stack ends
+
+code segment
+start:
+ mov ax,stack
+ mov ss,ax
+ mov sp,16
+ mov ax,data
+ mov ds,ax
+ mov ax,0
+
+ mov ax,4c00h
+ int 21h
+
+code ends
+end start
+```
+
+结果如下图所示，在程序执行第一条指令前`DS`指向可执行文件描述信息的开头，值为`075A`，描述信息占 256 字节，所以程序开始的段地址为`076A`（这里的程序开始不是指第一条指令所在的位置。）可以看到此时`SS=0769`，说明默认利用`可执行文件`开头`描述信息`256 个字节中的最后 16 个字节作为栈段。
+
+当我们将自己设置的栈段的段地址赋予`ss`后，看到`ss`的值为`076B`，位于数据段之后，程序入口地址之前。
+
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
+    src="./汇编语言-王爽(题解)-2/CH12_默认栈段段地址和自定义栈段段地址.png">
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">CH12_默认栈段段地址和自定义栈段段地址</div>
+</center>
+
+注：关于 可执行文件的描述信息 详见 P126 -->
